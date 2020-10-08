@@ -17,13 +17,13 @@ const GlobalStyles = createGlobalStyle`
 
   h2, h3 {
     font-family: ${props => props.theme.font.secondary}
-    font-weight: 700;
+    ${props => props.theme.font_weight.bold}
   }
 
   h1 {
     font-family: ${props => props.theme.font.primary};
     ${props => props.theme.font_size.xlarge};
-    font-weight: 700;
+    ${props => props.theme.font_weight.bold}
   }
 
   h2 {
@@ -37,7 +37,7 @@ const GlobalStyles = createGlobalStyle`
   p {
     ${props => props.theme.font_size.regular};
     color: ${props => props.theme.color.black.light};
-    font-weight: 300;
+    ${props => props.theme.font_weight.light}
   }
 
   @media (max-width: ${props => props.theme.screen.sm}) {

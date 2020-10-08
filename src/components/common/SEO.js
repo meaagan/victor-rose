@@ -2,14 +2,13 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 const SEO_DATA = {
-  description: 'An absurd gatsby starter',
-  title: 'Absurd',
-  url: '',
-  author: 'ajayns',
-  keywords: ['gatsby', 'site', 'absurd'],
+  description: 'Victor Rose Espresso Bar in Pointe Claire Village. A community spot to meet your friends, or grab your morning coffee on the way to work!',
+  title: 'Victor Rose',
+  url: 'www.victorrose.com',
+  author: 'Victor Rose',
+  keywords: ['coffee', 'cafe', 'pointe-claire', 'victor rose', 'local', 'coffee shop', 'cafe','espresso bar', 'Direct Fair Trade', ' Third Wave', 'local artists','espresso'],
   img: '',
-  twitterId: '@ajayns_',
-  facebookId: '',
+  facebookId: 'VictorRoseEspressoBar',
 };
 
 const SEO = () => {

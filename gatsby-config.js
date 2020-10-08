@@ -34,10 +34,10 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Victor Rose`,
-        short_name: `absurd`,
+        short_name: `victorrose`,
         start_url: `/`,
-        background_color: `#8bd8ed`,
-        theme_color: `#8bd8ed`,
+        background_color: `#DECAB2`,
+        theme_color: `#DECAB2`,
         display: `minimal-ui`,
         icon: `static/favicon.svg`,
       },

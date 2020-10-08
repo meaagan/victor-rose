@@ -10,6 +10,10 @@ const theme = {
     larger: 'font-size: 36px; line-height: 48px',
     xlarge: 'font-size: 48px; line-height: 56px',
   },
+  font_weight: {
+    light: 'font-weight: 300',
+    bold: 'font-weight: 700',
+  },
   color: {
     white: {
       regular: '#FFFFFF',
@@ -20,7 +24,7 @@ const theme = {
       light: '#564F62',
       regular: '#211E26',
     },
-    primary: '#8bd8ed',
+    primary: '#e5d4c0',
   },
   screen: {
     xs: '575px',
