@@ -33,7 +33,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Absurd`,
+        name: `Victor Rose`,
         short_name: `absurd`,
         start_url: `/`,
         background_color: `#8bd8ed`,
@@ -45,7 +45,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`average`, `prata\:400,700`],
+        fonts: [`Playfair Display\:700`, `Roboto\:300,700`],
       },
     },
     {
