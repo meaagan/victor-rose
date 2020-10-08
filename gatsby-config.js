@@ -13,6 +13,7 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -26,6 +27,27 @@ module.exports = {
       options: {
         name: `art`,
         path: `${__dirname}/src/images/art`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `homepage`,
+        path: `${__dirname}/src/images/homepage`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `about`,
+        path: `${__dirname}/src/images/about`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `contact`,
+        path: `${__dirname}/src/images/contact`,
       },
     },
     `gatsby-transformer-sharp`,

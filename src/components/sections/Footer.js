@@ -6,22 +6,21 @@ import Img from 'gatsby-image';
 import { Container } from '@components/global';
 import ExternalLink from '@common/ExternalLink';
 
-import GithubIcon from '@static/icons/github.svg';
-import InstagramIcon from '@static/icons/instagram.svg';
-import TwitterIcon from '@static/icons/twitter.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons'
+import { faInstagramSquare } from '@fortawesome/free-brands-svg-icons'
+
+const facebookIcon = faFacebookSquare
+const instagramIcon = faInstagramSquare
 
 const SOCIAL = [
   {
-    icon: GithubIcon,
-    link: 'https://github.com/ajayns/gatsby-absurd',
+    icon: facebookIcon,
+    link: 'https://www.facebook.com/VictorRoseEspressoBar/',
   },
   {
-    icon: InstagramIcon,
-    link: 'https://instagram.com/ajay_ns',
-  },
-  {
-    icon: TwitterIcon,
-    link: 'https://twitter.com/ajayns08',
+    icon: instagramIcon,
+    link: 'https://www.instagram.com/victorrose2015',
   },
 ];
 
@@ -43,12 +42,6 @@ const Footer = () => (
     `}
     render={data => (
       <React.Fragment>
-        <Art>
-          <Img
-            fluid={data.art_pot.childImageSharp.fluid}
-            style={{ width: 480, maxWidth: '100%', marginBottom: -16 }}
-          />
-        </Art>
         <FooterWrapper>
           <StyledContainer>
             <Copyright>
@@ -57,7 +50,7 @@ const Footer = () => (
             <SocialIcons>
               {SOCIAL.map(({ icon, link }) => (
                 <ExternalLink key={link} href={link}>
-                  <img src={icon} alt="link" />
+                  <FontAwesomeIcon icon={icon} />
                 </ExternalLink>
               ))}
             </SocialIcons>
@@ -96,13 +89,6 @@ const Copyright = styled.div`
     text-decoration: none;
     color: inherit;
   }
-`;
-
-const Art = styled.figure`
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  margin-top: 48px;
 `;
 
 const StyledContainer = styled(Container)`

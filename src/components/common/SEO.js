@@ -11,7 +11,7 @@ const SEO_DATA = {
   facebookId: 'VictorRoseEspressoBar',
 };
 
-const SEO = () => {
+const SEO = (props) => {
   return (
     <Helmet>
       <meta property="fb:app_id" content={SEO_DATA.facebookId} />

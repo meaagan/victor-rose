@@ -36,12 +36,4 @@ export const Section = styled.section`
   @media (max-width: ${props => props.theme.screen.md}) {
     padding: 96px 0;
   }
-
-  ${props =>
-    props.accent &&
-    `background-color: ${
-      props.accent === 'secondary'
-        ? props.theme.color.white.dark
-        : props.theme.color.primary
-    }`};
 `;
