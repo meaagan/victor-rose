@@ -14,8 +14,9 @@ const About = () => (
           name: { eq: "ladies" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 760) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            fixed(width: 400 height: 400) {
+              # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
+              ...GatsbyImageSharpFixed
             }
           }
         }
@@ -25,8 +26,9 @@ const About = () => (
           name: { eq: "artist" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 760) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            fixed(width: 400 height: 400) {
+              # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
+              ...GatsbyImageSharpFixed
             }
           }
         }
@@ -36,8 +38,9 @@ const About = () => (
           name: { eq: "coworking" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 760) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            fixed(width: 400 height: 400) {
+              # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
+              ...GatsbyImageSharpFixed
             }
           }
         }
@@ -48,7 +51,7 @@ const About = () => (
         <Container>
           <Grid inverse>
             <Art>
-              <Img fluid={data.ladies.childImageSharp.fluid} />
+              <Img fixed={data.ladies.childImageSharp.fixed} />
             </Art>
             <div>
               <h2>Our Story</h2>
@@ -70,12 +73,13 @@ const About = () => (
               </p>
             </div>
             <Art>
-              <Img fluid={data.artist.childImageSharp.fluid} />
+              <Img fixed={data.artist.childImageSharp.fixed} />
             </Art>
           </Grid>
           <Grid inverse>
             <Art>
-              <Img fluid={data.coworking.childImageSharp.fluid} />
+              <ImageBox />
+              <Img fixed={data.coworking.childImageSharp.fixed} />
             </Art>
             <div>
               <h2>Coworking Space</h2>
@@ -137,6 +141,15 @@ const Art = styled.figure`
   margin: 0;
   max-width: 380px;
   width: 100%;
+`;
+
+const ImageBox = styled.div`
+  background-color: brown;
+  position:absolute;
+  top: 10px;
+  left: 10px;
+  height: 100px;
+  width:100px;
 `;
 
 export default About;

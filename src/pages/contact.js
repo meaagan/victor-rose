@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import Layout from '@common/Layout';
 import { Container } from '@components/global';
 
-const SecondPage = () => (
+const Contact = () => (
   <Layout>
     <Container>
       <h1>Hi from the second page</h1>
@@ -14,4 +14,4 @@ const SecondPage = () => (
   </Layout>
 );
 
-export default SecondPage;
+export default Contact;

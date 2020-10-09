@@ -1,6 +1,11 @@
 import styled from 'styled-components';
-
+import { Link as GatsbyLink } from "gatsby";
 import { Container } from '@components/global';
+
+export const StyledLink = styled(GatsbyLink)`
+  color: ${props => props.theme.color.black.regular};
+  text-decoration: none;
+`;
 
 export const Nav = styled.nav`
   padding: 16px 0;
@@ -41,26 +46,26 @@ export const NavListWrapper = styled.div`
 `;
 
 export const NavItem = styled.li`
+  display: inline;
   margin: 0 0.75em;
   font-family: ${props => props.theme.font.secondary};
-  ${props => props.theme.font_size.small};
-
-  a {
-    text-decoration: none;
-    opacity: 0.7;
-    color: ${props => props.theme.color.black.regular};
-  }
+  ${props => props.theme.font_size.small};;
+  	background-image: linear-gradient(
+		0,
+		#964315 50%,
+		transparent 50%
+  );
+  padding-left: 0.25em;
+	padding-right: 0.25em;
 
   &.active {
-    a {
-      opacity: 1;
-    }
+    color: ${props => props.theme.color.black.regular};
   }
 `;
 
 export const MobileMenu = styled.div`
   width: 100%;
-  background: ${props => props.theme.color.primary};
+  background: ${props => props.theme.color.white.regular};
 `;
 
 export const Brand = styled.div`
