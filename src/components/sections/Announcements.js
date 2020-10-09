@@ -14,7 +14,7 @@ const Announcements = () => (
     query={graphql`
       query {
         announcements: file(
-          sourceInstanceName: { eq: "art" }
+          sourceInstanceName: { eq: "homepage" }
           name: { eq: "announcements" }
         ) {
           childImageSharp {

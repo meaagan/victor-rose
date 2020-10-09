@@ -9,9 +9,9 @@ const About = () => (
   <StaticQuery
     query={graphql`
       query {
-        art_fast: file(
-          sourceInstanceName: { eq: "art" }
-          name: { eq: "fast" }
+        ladies: file(
+          sourceInstanceName: { eq: "homepage" }
+          name: { eq: "ladies" }
         ) {
           childImageSharp {
             fluid(maxWidth: 760) {
@@ -20,9 +20,9 @@ const About = () => (
           }
         }
 
-        art_learn: file(
-          sourceInstanceName: { eq: "art" }
-          name: { eq: "learn_yourself" }
+        artist: file(
+          sourceInstanceName: { eq: "homepage" }
+          name: { eq: "artist" }
         ) {
           childImageSharp {
             fluid(maxWidth: 760) {
@@ -31,9 +31,9 @@ const About = () => (
           }
         }
 
-        art_ideas: file(
-          sourceInstanceName: { eq: "art" }
-          name: { eq: "ideas" }
+        coworking: file(
+          sourceInstanceName: { eq: "homepage" }
+          name: { eq: "coworking" }
         ) {
           childImageSharp {
             fluid(maxWidth: 760) {
@@ -48,7 +48,7 @@ const About = () => (
         <Container>
           <Grid inverse>
             <Art>
-              <Img fluid={data.art_fast.childImageSharp.fluid} />
+              <Img fluid={data.ladies.childImageSharp.fluid} />
             </Art>
             <div>
               <h2>Our Story</h2>
@@ -70,12 +70,12 @@ const About = () => (
               </p>
             </div>
             <Art>
-              <Img fluid={data.art_learn.childImageSharp.fluid} />
+              <Img fluid={data.artist.childImageSharp.fluid} />
             </Art>
           </Grid>
           <Grid inverse>
             <Art>
-              <Img fluid={data.art_ideas.childImageSharp.fluid} />
+              <Img fluid={data.coworking.childImageSharp.fluid} />
             </Art>
             <div>
               <h2>Coworking Space</h2>
@@ -96,7 +96,7 @@ const About = () => (
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: 2fr 2fr;
   grid-gap: 40px;
   text-align: right;
   align-items: center;
@@ -107,7 +107,7 @@ const Grid = styled.div`
     props.inverse &&
     `
     text-align: left;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 2fr 2fr;
   `}
 
   h2 {
