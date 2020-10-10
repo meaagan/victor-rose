@@ -14,9 +14,8 @@ const About = () => (
           name: { eq: "ladies" }
         ) {
           childImageSharp {
-            fixed(width: 400 height: 400) {
-              # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
-              ...GatsbyImageSharpFixed
+            fluid(maxWidth: 760) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }
@@ -26,9 +25,8 @@ const About = () => (
           name: { eq: "artist" }
         ) {
           childImageSharp {
-            fixed(width: 400 height: 400) {
-              # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
-              ...GatsbyImageSharpFixed
+            fluid(maxWidth: 760) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }
@@ -38,9 +36,8 @@ const About = () => (
           name: { eq: "coworking" }
         ) {
           childImageSharp {
-            fixed(width: 400 height: 400) {
-              # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
-              ...GatsbyImageSharpFixed
+            fluid(maxWidth: 760 maxHeight: 760) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }
@@ -51,7 +48,7 @@ const About = () => (
         <Container>
           <Grid inverse>
             <Art>
-              <Img fixed={data.ladies.childImageSharp.fixed} />
+              <Img fluid={data.ladies.childImageSharp.fluid} />
             </Art>
             <div>
               <h2>Our Story</h2>
@@ -73,13 +70,12 @@ const About = () => (
               </p>
             </div>
             <Art>
-              <Img fixed={data.artist.childImageSharp.fixed} />
+              <Img fluid={data.artist.childImageSharp.fluid} />
             </Art>
           </Grid>
           <Grid inverse>
             <Art>
-              <ImageBox />
-              <Img fixed={data.coworking.childImageSharp.fixed} />
+              <Img fluid={data.coworking.childImageSharp.fluid} />
             </Art>
             <div>
               <h2>Coworking Space</h2>

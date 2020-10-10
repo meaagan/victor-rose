@@ -2,15 +2,15 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import Layout from '@common/Layout';
-import Navbar from '@common/Navbar'
 import { Container } from '@components/global';
 
 const About  = () => (
   <Layout>
     <Container>
-      <h1>Hi from the third page</h1>
-      <p>Welcome to page 3</p>
-      <Link to="/">Go back to the homepage</Link>
+      <h2>VICTOR ROSE</h2>
+      <p></p>
+      <h2>About Us</h2>
+      <p></p>
     </Container>
   </Layout>
 );

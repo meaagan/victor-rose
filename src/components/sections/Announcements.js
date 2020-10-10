@@ -4,10 +4,6 @@ import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 import { Section, Container } from '@components/global';
-import ExternalLink from '@common/ExternalLink';
-
-
-
 
 const Announcements = () => (
   <StaticQuery
@@ -18,7 +14,7 @@ const Announcements = () => (
           name: { eq: "announcements" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 1200) {
+            fluid(maxWidth: 3000 maxHeight: 800) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
@@ -26,20 +22,19 @@ const Announcements = () => (
       }
     `}
     render={data => (
-      <Section id="brands" accent>
-        <StyledContainer>
+      <StyledSection>
+        {/* <StyledContainer> */}
           <Art>
             <Img fluid={data.announcements.childImageSharp.fluid} />
           </Art>
           <TextBox>
             <h1>Announcements</h1>
-            <p>
+            <p style={{ color: 'white' }}>
               Lorem ipsum dolor amet
             </p>
           </TextBox>
-
-        </StyledContainer>
-      </Section>
+        {/* </StyledContainer> */}
+      </StyledSection>
     )}
   />
 );
@@ -48,10 +43,18 @@ const StyledContainer = styled(Container)`
   display: flex;
   justify-content: center;
   position: relative;
+  color: ${props => props.theme.color.white.regular};
 
   @media (max-width: ${props => props.theme.screen.md}) {
     justify-content: center;
   }
+`;
+
+const StyledSection = styled(Section)`
+display: flex;
+margin: 0 auto;
+width: 100%;
+text-align: center;
 `;
 
 const TextBox = styled.div`
@@ -62,18 +65,8 @@ const TextBox = styled.div`
 `;
 
 const Art = styled.figure`
-  display: block;
-  masight: auto;
-
-  @media (max-width: ${props => props.theme.screen.lg}) {
-    top: 0;
-    right: 65%;
-    width: 500px;
-  }
-
-  @media (max-width: ${props => props.theme.screen.md}) {
-    display: none;
-  }
+  width: 100%;
+  margin: 0;
 `;
 
 export default Announcements;

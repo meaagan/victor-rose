@@ -7,12 +7,17 @@ import SEO from '@common/SEO';
 import theme from '@styles/theme';
 import GlobalStyles from '@styles/GlobalStyles';
 
+import Navbar from '@common/Navbar';
+import Footer from '@common/Footer/Footer';
+
 const Layout = ({ children }) => (
   <ThemeProvider theme={theme}>
     <>
       <SEO />
       <GlobalStyles />
-      {children}
+      <Navbar />
+        {children}
+      <Footer />
     </>
   </ThemeProvider>
 );

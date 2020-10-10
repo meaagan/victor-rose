@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-
+ 
 const Header = () => (
   <StaticQuery
     query={graphql`
@@ -20,11 +20,11 @@ const Header = () => (
       }
     `}
     render={data => (
-      <HeaderWrapper>
-            <Art>
-              <Img fluid={data.cheers.childImageSharp.fluid} />
-            </Art>
-      </HeaderWrapper>
+        <HeaderWrapper>
+          <Art>
+            <Img fluid={data.cheers.childImageSharp.fluid} />
+          </Art>
+        </HeaderWrapper>
     )}
   />
 );
