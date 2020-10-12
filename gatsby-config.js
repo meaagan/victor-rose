@@ -2,6 +2,12 @@ const path = require('path');
 
 module.exports = {
   plugins: [
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `1921572799`,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-svgr`,

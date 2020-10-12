@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import BackgroundImage from 'gatsby-background-image';
  
 const Header = () => (
   <StaticQuery
@@ -19,23 +19,31 @@ const Header = () => (
         }
       }
     `}
-    render={data => (
+    render={data => {
+      const imageData = data.cheers.childImageSharp.fluid
+      return(
         <HeaderWrapper>
-          <Art>
-            <Img fluid={data.cheers.childImageSharp.fluid} />
-          </Art>
+          <Parallax
+            Tag="section"
+            fluid= {imageData}
+          >
+          </Parallax>
         </HeaderWrapper>
-    )}
+      )
+    }}
   />
 );
 
-const HeaderWrapper = styled.header`
-  background-color: ${props => props.theme.color.primary};
+const Parallax = styled(BackgroundImage)`
+  background-attachment: fixed; 
+  background-position: 60% 50%; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  height: 100vh; 
 `;
 
-const Art = styled.figure`
-  width: 100%;
-  margin: 0;
-`;
+const HeaderWrapper = styled.div`
+    height: 100vh;
+`
 
 export default Header;
