@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 import { Section, Container } from '@components/global';
 
@@ -14,7 +16,7 @@ const About = () => (
           name: { eq: "ladies" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 760) {
+            fluid(maxWidth: 800) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
@@ -25,7 +27,29 @@ const About = () => (
           name: { eq: "artist" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 760) {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
+
+        coworking2: file(
+          sourceInstanceName: { eq: "homepage" }
+          name: { eq: "coworking2" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
+
+        coworking3: file(
+          sourceInstanceName: { eq: "homepage" }
+          name: { eq: "coworking3" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 800) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
@@ -36,7 +60,7 @@ const About = () => (
           name: { eq: "coworking" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 760 maxHeight: 760) {
+            fluid(maxWidth: 800) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
@@ -63,6 +87,7 @@ const About = () => (
           <Grid>
             <div>
               <h2>Artist of the Month</h2>
+              <h3>On Hold during COVID-19</h3>
               <p>
                 Enjoy the power of the latest web technologies – React.js ,
                 Webpack , modern JavaScript and CSS and more — all set up and
@@ -74,9 +99,18 @@ const About = () => (
             </Art>
           </Grid>
           <Grid inverse>
-            <Art>
-              <Img fluid={data.coworking.childImageSharp.fluid} />
-            </Art>
+            <Carousel 
+              swipeable={false}
+              responsive={responsive}
+              ssr={true}
+              keyBoardControl={true}
+              customTransition="all .5"
+              transitionDuration={500}
+            >
+            <Art><Img fluid={data.coworking.childImageSharp.fluid} /></Art>        
+            <Art><Img fluid={data.coworking2.childImageSharp.fluid} /></Art>
+            <Art><Img fluid={data.coworking3.childImageSharp.fluid} /></Art>
+            </Carousel>
             <div>
               <h2>Coworking Space</h2>
               <p>
@@ -94,14 +128,33 @@ const About = () => (
   />
 );
 
+const responsive = {
+  superLargeDesktop: {
+    breakpoint: { max: 4000, min: 3000 },
+    items: 1
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 1
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 1
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1
+  }
+};
+
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 2fr 2fr;
-  grid-gap: 40px;
+  grid-gap: 100px;
   text-align: right;
   align-items: center;
   justify-items: center;
-  margin: 24px 0;
+  margin: 50px 0;
 
   ${props =>
     props.inverse &&
@@ -135,7 +188,7 @@ const Grid = styled.div`
 
 const Art = styled.figure`
   margin: 0;
-  max-width: 380px;
+  max-width: 765px;
   width: 100%;
 `;
 

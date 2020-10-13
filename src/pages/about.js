@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
 import Layout from '@common/Layout';
 import { Container } from '@components/global';

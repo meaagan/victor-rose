@@ -2,6 +2,7 @@ const path = require('path');
 
 module.exports = {
   plugins: [
+    `gatsby-plugin-material-ui`,
     {
       resolve: `gatsby-source-instagram`,
       options: {
@@ -21,20 +22,6 @@ module.exports = {
     },
     `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-styled-components`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `team`,
-        path: `${__dirname}/src/images/team`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `art`,
-        path: `${__dirname}/src/images/art`,
-      },
-    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

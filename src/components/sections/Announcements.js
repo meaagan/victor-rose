@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import BackgroundImage from 'gatsby-background-image';
 
-import { Section, Container } from '@components/global';
+import { Section } from '@components/global';
 
 const Announcements = () => (
   <StaticQuery
@@ -22,51 +22,38 @@ const Announcements = () => (
       }
     `}
     render={data => (
-      <StyledSection>
-        {/* <StyledContainer> */}
-          <Art>
-            <Img fluid={data.announcements.childImageSharp.fluid} />
-          </Art>
+      <Section id="announcements">
+        <StyledContainer
+            tag="announcements"
+            fluid={data.announcements.childImageSharp.fluid}
+        >
           <TextBox>
             <h1>Announcements</h1>
-            <p style={{ color: 'white' }}>
+            <p>
               Lorem ipsum dolor amet
             </p>
           </TextBox>
-        {/* </StyledContainer> */}
-      </StyledSection>
+        </StyledContainer>
+      </Section>
     )}
   />
 );
 
-const StyledContainer = styled(Container)`
+const StyledContainer = styled(BackgroundImage)`
+  height: 25vh;
   display: flex;
   justify-content: center;
-  position: relative;
-  color: ${props => props.theme.color.white.regular};
+  align-items: center;
+  text-align: center;
 
   @media (max-width: ${props => props.theme.screen.md}) {
     justify-content: center;
   }
 `;
 
-const StyledSection = styled(Section)`
-display: flex;
-margin: 0 auto;
-width: 100%;
-text-align: center;
-`;
-
 const TextBox = styled.div`
-  position: absolute;    
-  height: 100%;
-  text-align: center;    
-  width: 100%;
-`;
-
-const Art = styled.figure`
-  width: 100%;
-  margin: 0;
+  text-align: center;  
+  color: ${props => props.theme.color.white.regular}; 
 `;
 
 export default Announcements;

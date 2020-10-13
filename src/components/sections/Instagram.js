@@ -1,5 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby';
+import styled from 'styled-components';
 import Img from 'gatsby-image'
 import { Section, Container } from '@components/global';
 import Carousel from 'react-multi-carousel';
@@ -15,7 +16,7 @@ const Instagram = () => {
                 preview
                 localFile {
                     childImageSharp {
-                    fixed(width: 200, height: 200) {
+                    fixed(width: 200, height: 200, jpegQuality: 100) {
                         ...GatsbyImageSharpFixed
                     }
                 }
@@ -51,27 +52,29 @@ const Instagram = () => {
         <Section id="instagram">
             <Container>
                 <h2>Follow us on Instagram</h2>
-                <Carousel
+                <StyledCarousel
                     swipeable={true}
                     centerMode={true}
                     responsive={responsive}
                     ssr={true} // means to render carousel on server-side.
                     keyBoardControl={true}
-                    customTransition='all .5'
-                    transitionDuration={500}
                     removeArrowOnDeviceType={["tablet", "mobile"]}
                 >
                     {instaPosts.map(({ node }) => {
                         return(
-                            <div>
-                                <Img fixed = {node.localFile.childImageSharp.fixed} />
-                            </div>
+                          <a href="http://www.instagram.com/victorrose2015" target="_blank">
+                            <Img fixed = {node.localFile.childImageSharp.fixed} />
+                          </a>
                         )
                     })}
-                </Carousel>
+                </StyledCarousel>
             </Container>
         </Section>
     )
 }
+
+const StyledCarousel = styled(Carousel)`
+  transition: all 0.5s ease 0s;
+`
 
 export default Instagram;
