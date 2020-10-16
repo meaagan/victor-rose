@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from '@common/Layout';
 import { Container } from '@components/global';
 
-const About  = () => (
+const About = () => (
   <Layout>
     <Container>
       <h2>VICTOR ROSE</h2>
