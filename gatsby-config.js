@@ -2,6 +2,12 @@ const path = require('path');
 
 module.exports = {
   plugins: [
+    {
+      resolve: 'gatsby-plugin-react-leaflet',
+      options: {
+        linkStyles: true // (default: true) Enable/disable loading stylesheets via CDN
+      },
+    },
     `gatsby-plugin-material-ui`,
     {
       resolve: `gatsby-source-instagram`,

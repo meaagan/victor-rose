@@ -19,6 +19,7 @@ export const NavContainer = styled(Container)`
 
 export const AppBarStyled = styled(AppBar) `
   color: ${props => props.theme.color.black.regular};
+  margin-bottom: 100%;
 `;
 
 export const StyledLink = styled(GatsbyLink)`

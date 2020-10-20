@@ -18,6 +18,9 @@ export const SocialIcons = styled.div`
 export const FooterWrapper = styled.footer`
   background-color: ${props => props.theme.color.white.dark};
   padding: 32px 0;
+  position: static;
+  bottom: 0;
+  width: 100vw;
 `;
 
 export const Copyright = styled.div`
