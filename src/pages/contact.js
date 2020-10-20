@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Layout from '@common/Layout';
-import  Form from './form';
+import  Form from './components/form';
 import { Container } from '@components/global';
 import Links  from '@sections/contact/Links'
 
