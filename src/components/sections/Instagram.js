@@ -58,7 +58,6 @@ const Instagram = () => {
                     responsive={responsive}
                     ssr={true} // means to render carousel on server-side.
                     keyBoardControl={true}
-                    removeArrowOnDeviceType={["tablet", "mobile"]}
                 >
                     {instaPosts.map(({ node }) => {
                         return(

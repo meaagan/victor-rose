@@ -53,6 +53,7 @@ export const StyledContainer = styled(Container)`
   @media (max-width: ${props => props.theme.screen.sm}) {
     flex-direction: column;
     text-align: center;
+    align-items: center;
   }
 `;
 
