@@ -4,6 +4,7 @@ const theme = {
     secondary: `'roboto', sans serif`,
   },
   font_size: {
+    xsmall: 'font-size: 16px; line-height: 24px',
     small: 'font-size: 20px; line-height: 30px',
     regular: 'font-size: 24px; line-height: 32px',
     large: 'font-size: 30px; line-height: 40px',

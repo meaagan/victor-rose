@@ -1,6 +1,16 @@
 import styled from 'styled-components';
 import { Container } from '@components/global';
 
+export const SocialLink = styled.a`
+  width: 50px;
+  height: 50px;
+  background-image: none;
+`
+
+export const Bold = styled.span`
+  ${props => props.theme.font_weight.bold}
+`
+
 export const SocialIcons = styled.div`
   display: flex;
 
@@ -21,6 +31,7 @@ export const FooterWrapper = styled.footer`
   position: static;
   bottom: 0;
   width: 100vw;
+  overflow: hidden;
 `;
 
 export const Copyright = styled.div`
@@ -36,11 +47,15 @@ export const Copyright = styled.div`
 
 export const StyledContainer = styled(Container)`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-around;
+  align-items: baseline;
 
   @media (max-width: ${props => props.theme.screen.sm}) {
     flex-direction: column;
     text-align: center;
   }
 `;
+
+export const FooterText =  styled.p`
+    ${props => props.theme.font_size.xsmall};
+`

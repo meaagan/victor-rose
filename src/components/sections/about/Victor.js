@@ -8,8 +8,8 @@ const Victor = () => (
         query={graphql`
         query {
             ladies: file(
-            sourceInstanceName: { eq: "homepage" }
-            name: { eq: "ladies" }
+                sourceInstanceName: { eq: "homepage" }
+                name: { eq: "ladies" }
             ) {
             childImageSharp {
                 fluid(maxWidth: 800, maxHeight: 800) {
@@ -18,20 +18,20 @@ const Victor = () => (
             }
             }
 
-            artist: file(
-            sourceInstanceName: { eq: "homepage" }
-            name: { eq: "artist" }
+            victorrose: file(
+                sourceInstanceName: { eq: "homepage" }
+                name: { eq: "victorrose" }
             ) {
             childImageSharp {
-                fluid(maxWidth: 300, maxHeight: 300) {
+                fluid(maxWidth: 800) {
                 ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
             }
             }
 
             coworking: file(
-            sourceInstanceName: { eq: "homepage" }
-            name: { eq: "coworking" }
+                sourceInstanceName: { eq: "homepage" }
+                name: { eq: "coworking" }
             ) {
             childImageSharp {
                 fluid(maxWidth: 800, maxHeight: 800) {
@@ -47,7 +47,7 @@ const Victor = () => (
                 <h2 style={{textAlign: 'center'}}>VICTOR ROSE</h2>
                 <VictorContainer>
                     <Art>
-                        <Img fluid={data.artist.childImageSharp.fluid} />
+                        <Img fluid={data.victorrose.childImageSharp.fluid} />
                     </Art>
                     <div>
                         <p>
@@ -65,7 +65,7 @@ const Victor = () => (
                 </VictorContainer>
                 <TrioContainer>
                     <Trio><Img fluid={data.ladies.childImageSharp.fluid} /></Trio>
-                    <Trio><Img fluid={data.artist.childImageSharp.fluid} /></Trio>
+                    <Trio><Img fluid={data.ladies.childImageSharp.fluid} /></Trio>
                     <Trio><Img fluid={data.coworking.childImageSharp.fluid} /></Trio>
                 </TrioContainer>
             </div>
@@ -93,6 +93,7 @@ const Art = styled.figure`
 const VictorContainer = styled.div`
     display: flex;
     justify-content: space-around;
+    align-items:center;
 `
 
 export default Victor;
