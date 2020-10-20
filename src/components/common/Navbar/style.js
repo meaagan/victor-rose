@@ -1,92 +1,39 @@
 import styled from 'styled-components';
 import { Link as GatsbyLink } from "gatsby";
-import { Container } from '@components/global';
+import {
+  AppBar,
+  Container,
+  List
+} from "@material-ui/core";
 
-export const StyledLink = styled(GatsbyLink)`
-  color: ${props => props.theme.color.black.regular};
-  text-decoration: none;
-`;
+export const NavbarList = styled(List)`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+`
 
-export const Nav = styled.nav`
-  padding: 16px 0;
-  background-color: ${props => props.theme.color.white.regular};
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.15));
-`;
-
-export const StyledContainer = styled(Container)`
+export const NavContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+`
+
+export const AppBarStyled = styled(AppBar) `
+  color: ${props => props.theme.color.black.regular};
 `;
 
-export const NavListWrapper = styled.div`
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-
-    ${({ mobile }) =>
-      mobile &&
-      `
-        flex-direction: column;
-        margin-top: 1em;
-
-        > ${NavItem} {
-          margin: 0;
-          margin-top: 0.75em;
-        }
-      `};
-  }
-`;
-
-export const NavItem = styled.li`
-  display: inline;
-  margin: 0 0.75em;
+export const StyledLink = styled(GatsbyLink)`
+  margin: 0px 0.75em;
+  ${props => props.theme.font_size.small};
   font-family: ${props => props.theme.font.secondary};
-  ${props => props.theme.font_size.small};;
-  	background-image: linear-gradient(
-		0,
-		#964315 50%,
-		transparent 50%
-  );
+  color: ${props => props.theme.color.black.light};
+  text-decoration: none;
+  
   padding-left: 0.25em;
-	padding-right: 0.25em;
-
-  &.active {
-    color: ${props => props.theme.color.black.regular};
-  }
-`;
-
-export const MobileMenu = styled.div`
-  width: 100%;
-  background: ${props => props.theme.color.white.regular};
+  padding-right: 0.25em;
 `;
 
 export const Brand = styled.div`
   font-family: ${props => props.theme.font.primary};
   ${props => props.theme.font_size.large};
-`;
-
-export const Mobile = styled.div`
-  display: none;
-
-  @media (max-width: ${props => props.theme.screen.md}) {
-    display: block;
-  }
-
-  ${props =>
-    props.hide &&
-    `
-    display: block;
-
-    @media (max-width: ${props.theme.screen.md}) {
-      display: none;
-    }
-  `}
+  color: ${props => props.theme.color.black.regular};
 `;

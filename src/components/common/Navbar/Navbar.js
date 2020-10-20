@@ -1,77 +1,43 @@
-import React, { Component } from 'react';
+import React from "react"
 
-import { Container } from '@components/global';
-import { Link } from "gatsby"
-import {
-  Nav,
-  NavItem,
-  Brand,
-  StyledContainer,
-  NavListWrapper,
-  MobileMenu,
-  Mobile,
-  StyledLink,
-} from './style';
+import SideDrawer from "./SideDrawer"
+import { Toolbar, Hidden } from "@material-ui/core";
+import HideOnScroll from "./HideOnScroll"
+import { 
+  Brand, 
+  NavbarList,
+  NavContainer,
+  AppBarStyled,
+  StyledLink } from "./style"
 
-import { ReactComponent as MenuIcon } from '@static/icons/menu.svg';
+const navLinks = [
+  { title: `about`, path: `/about` },
+  { title: `menu`, path: `/menu` },
+  { title: `contact`, path: `/contact` },
+]
 
-const NAV_ITEMS = ['about', 'menu', 'contact'];
-
-class Navbar extends Component {
-  state = {
-    mobileMenuOpen: false,
-  };
-
-  toggleMobileMenu = () => {
-    this.setState(prevState => ({ mobileMenuOpen: !prevState.mobileMenuOpen }));
-  };
-
-  closeMobileMenu = () => {
-    if (this.state.mobileMenuOpen) {
-      this.setState({ mobileMenuOpen: false });
-    }
-  };
-
-  getNavList = () => (
-    <NavListWrapper>
-        {NAV_ITEMS.map(navItem => (
-          <NavItem key={navItem}><StyledLink to={navItem}>{navItem}</StyledLink></NavItem>
-        ))}
-    </NavListWrapper>
-  );
-
-  render() {
-    const { mobileMenuOpen } = this.state;
-
-    return (
-      <Nav {...this.props}>
-        <StyledContainer>
-          <Brand>
-            <Link 
-              to="/"
-              style={{ color: 'black', textDecoration: 'none'}}
-            >
-                VICTOR ROSE
-            </Link>
-          </Brand>
-          <Mobile>
-            <button onClick={this.toggleMobileMenu} style={{ color: 'black' }}>
-              <MenuIcon />
-            </button>
-          </Mobile>
-
-          <Mobile hide>{this.getNavList()}</Mobile>
-        </StyledContainer>
-        <Mobile>
-          {mobileMenuOpen && (
-            <MobileMenu>
-              <Container>{this.getNavList()}</Container>
-            </MobileMenu>
-          )}
-        </Mobile>
-      </Nav>
-    );
-  }
+const Navbar = () => {
+  return (
+    <HideOnScroll>
+      <AppBarStyled position="fixed">
+        <Toolbar style={{backgroundColor: 'white'}}>
+          <NavContainer maxWidth="md" style={{display:'flex'}}>
+            <Brand>VICTOR ROSE</Brand>
+            <Hidden smDown>
+              <NavbarList component="nav" aria-labelledby="main navigation">
+                <StyledLink to='/about' key='about' style={{backgroundImage: 'linear-gradient(0deg, rgb(106, 43, 5) 50%, transparent 50%)'}}>About</StyledLink>
+                <StyledLink to='/menu' key='menu' style={{backgroundImage: 'linear-gradient(0deg, rgb(150, 67, 21) 50%, transparent 50%)'}}>Menu</StyledLink>
+                <StyledLink to='/contact' key='contact' style={{backgroundImage: 'linear-gradient(0deg, rgb(187, 107, 36) 50%, transparent 50%)'}}>Contact</StyledLink>
+              </NavbarList>
+            </Hidden>
+            <Hidden mdUp>
+              <SideDrawer navLinks={navLinks} />
+            </Hidden>
+          </NavContainer>
+        </Toolbar>
+      </AppBarStyled>
+    </HideOnScroll>
+  )
 }
 
 export default Navbar;

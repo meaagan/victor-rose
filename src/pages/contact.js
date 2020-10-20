@@ -4,7 +4,8 @@ import Layout from '@common/Layout';
 import Form from '@sections/Form';
 import Container from '@components/global';
 
-const Contact = () => (
+const Contact = () => {
+    return(
     <Layout>
       <Container>
         <h1>Contact</h1>
@@ -21,7 +22,8 @@ const Contact = () => (
         </ContactContainer>
       </Container>
     </Layout>
-);
+    )
+};
 
 const ContactLinks = styled.ul`
   list-style: none;

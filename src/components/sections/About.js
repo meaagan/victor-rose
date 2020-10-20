@@ -16,7 +16,7 @@ const About = () => (
           name: { eq: "ladies" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 800) {
+            fluid(maxWidth: 800, maxHeight: 800) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
@@ -27,7 +27,7 @@ const About = () => (
           name: { eq: "artist" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 800) {
+            fluid(maxWidth: 800, maxHeight: 800) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
@@ -38,7 +38,7 @@ const About = () => (
           name: { eq: "coworking2" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 800) {
+            fluid(maxWidth: 800, maxHeight: 800) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
@@ -49,7 +49,7 @@ const About = () => (
           name: { eq: "coworking3" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 800) {
+            fluid(maxWidth: 800, maxHeight: 800) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
@@ -60,7 +60,7 @@ const About = () => (
           name: { eq: "coworking" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 800) {
+            fluid(maxWidth: 800, maxHeight: 800) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
@@ -77,10 +77,7 @@ const About = () => (
             <div>
               <h2>Our Story</h2>
               <p>
-                Gatsby.js builds the fastest possible website. Instead of
-                waiting to generate pages when requested, pre-build pages and
-                lift them into a global cloud of servers — ready to be delivered
-                instantly to your users wherever they are.
+              Victor Rose Espresso Bar in Pointe-Claire Village run by local mother daughter duo, Marie & Terry. A community spot to meet your friends, or grab your morning coffee on the way to work!
               </p>
             </div>
           </Grid>
@@ -89,9 +86,7 @@ const About = () => (
               <h2>Artist of the Month</h2>
               <h3>On Hold during COVID-19</h3>
               <p>
-                Enjoy the power of the latest web technologies – React.js ,
-                Webpack , modern JavaScript and CSS and more — all set up and
-                waiting for you to start building.
+                
               </p>
             </div>
             <Art>
@@ -99,26 +94,22 @@ const About = () => (
             </Art>
           </Grid>
           <Grid inverse>
-            <Carousel 
+            {/* <Carousel 
               swipeable={false}
               responsive={responsive}
               ssr={true}
               keyBoardControl={true}
               customTransition="all .5"
               transitionDuration={500}
-            >
+            > */}
             <Art><Img fluid={data.coworking.childImageSharp.fluid} /></Art>        
-            <Art><Img fluid={data.coworking2.childImageSharp.fluid} /></Art>
-            <Art><Img fluid={data.coworking3.childImageSharp.fluid} /></Art>
-            </Carousel>
+            {/* <Art><Img fluid={data.coworking2.childImageSharp.fluid} /></Art> */}
+            {/* <Art><Img fluid={data.coworking3.childImageSharp.fluid} /></Art> */}
+            {/* </Carousel> */}
             <div>
               <h2>Coworking Space</h2>
+              <h3>On Hold during COVID-19</h3>
               <p>
-                Waste no more time on tooling and performance. Focus on the the
-                site you want to build and nothing more.
-                <br />
-                <br />
-                Gatsby is fast in every way that matters.
               </p>
             </div>
           </Grid>

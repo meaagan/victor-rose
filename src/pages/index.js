@@ -10,7 +10,7 @@ import Intro from '@sections/Intro';
 const IndexPage = () => (
   <Layout>
     <Header />
-    <Intro />
+    {/* <Intro /> */}
     <Announcements />
     <About />
     <Instagram />
