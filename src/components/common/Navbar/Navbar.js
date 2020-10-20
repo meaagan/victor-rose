@@ -27,9 +27,9 @@ const Navbar = () => {
             <Brand><HomeLink to="/">VICTOR ROSE</HomeLink></Brand>
             <Hidden smDown>
               <NavbarList component="nav" aria-labelledby="main navigation">
-                <StyledLink to='/about' key='about' style={{backgroundImage: 'linear-gradient(0deg, rgb(106, 43, 5) 50%, transparent 50%)'}}>About</StyledLink>
-                <StyledLink to='/menu' key='menu' style={{backgroundImage: 'linear-gradient(0deg, rgb(150, 67, 21) 50%, transparent 50%)'}}>Menu</StyledLink>
-                <StyledLink to='/contact' key='contact' style={{backgroundImage: 'linear-gradient(0deg, rgb(187, 107, 36) 50%, transparent 50%)'}}>Contact</StyledLink>
+                <StyledLink to='/about' key='about' style={{backgroundImage: 'linear-gradient(0deg, rgb(202,157,124) 50%, transparent 50%)'}}>About</StyledLink>
+                <StyledLink to='/menu' key='menu' style={{backgroundImage: 'linear-gradient(0deg, rgb(233,203,167) 50%, transparent 50%)'}}>Menu</StyledLink>
+                <StyledLink to='/contact' key='contact' style={{backgroundImage: 'linear-gradient(0deg, rgb(245,238,220) 50%, transparent 50%)'}}>Contact</StyledLink>
               </NavbarList>
             </Hidden>
             <Hidden mdUp>

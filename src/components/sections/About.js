@@ -77,7 +77,7 @@ const About = () => (
             <div>
               <h2>Our Story</h2>
               <p>
-              Victor Rose Espresso Bar in Pointe-Claire Village run by local mother daughter duo, Marie & Terry. A community spot to meet your friends, or grab your morning coffee on the way to work!
+              Victor Rose Espresso Bar in Pointe-Claire Village is a Direct Fair Trade Coffee Shop run by local mother daughter duo, Marie & Terry. A community spot to meet your friends, or grab your morning coffee on the way to work!
               </p>
             </div>
           </Grid>
@@ -110,6 +110,7 @@ const About = () => (
               <h2>Coworking Space</h2>
               <h3>On Hold during COVID-19</h3>
               <p>
+                
               </p>
             </div>
           </Grid>
