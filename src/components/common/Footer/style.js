@@ -34,21 +34,16 @@ export const FooterWrapper = styled.footer`
   overflow: hidden;
 `;
 
-export const Copyright = styled.div`
-  font-family: ${props => props.theme.font.secondary};
-  ${props => props.theme.font_size.small};
-  color: ${props => props.theme.color.black.regular};
-
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
+export const Copyright = styled.figure`
+  margin: 0;
+  max-width: 150px;
+  width: 100%;
 `;
 
 export const StyledContainer = styled(Container)`
   display: flex;
   justify-content: space-around;
-  align-items: baseline;
+  align-items: flex-start;
 
   @media (max-width: ${props => props.theme.screen.sm}) {
     flex-direction: column;

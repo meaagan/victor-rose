@@ -1,5 +1,6 @@
 import React from "react"
 import { TextField, Button } from '@material-ui/core'
+import styled from 'styled-components';
 
 const encode = (data) => {
   return Object.keys(data)
@@ -23,9 +24,10 @@ class Form extends React.Component {
        method: "POST",
        headers: { "Content-Type": "application/x-www-form-urlencoded"},
        body: encode({ "form-name": "contact", ...this.state })
-      }) 
+      })
+        .catch(error => alert("Error! Please fill out all required fields"))
         .then(() => this.setState({text:'Sent!'}))
-        .catch(error => alert(error))
+        
 
       e.preventDefault();
    }
@@ -50,8 +52,9 @@ class Form extends React.Component {
           Content-Type="application/x-www-form-urlencoded"
         >
           <input type="hidden" name="form-name" value="contact" />
-          <p>
+          <Field>
             <TextField
+              fullWidth
               label="First Name"
               type="text"
               name="firstName"
@@ -59,10 +62,12 @@ class Form extends React.Component {
               onChange={this.handleInputChange}
               variant="outlined"
               size="small"
+              required
             />   
-          </p>
-          <p>
+          </Field>
+          <Field>
             <TextField
+              fullWidth
               label="Last name"
               type="text" 
               name="lastName"
@@ -70,10 +75,12 @@ class Form extends React.Component {
               onChange={this.handleInputChange}
               variant="outlined"
               size="small"
+              required
             />
-          </p>
-          <p>
-            <TextField 
+          </Field>
+          <Field>
+            <TextField
+              fullWidth 
               label="Email"
               type="email" 
               name="email"
@@ -81,10 +88,12 @@ class Form extends React.Component {
               onChange={this.handleInputChange}
               variant="outlined"
               size="small"
+              required
             />
-          </p>
-          <p>
+          </Field>
+          <Field>
             <TextField
+              fullWidth
               label="Message"
               id="outlined-multiline-static" 
               name="message"
@@ -92,19 +101,21 @@ class Form extends React.Component {
               rows={4}
               variant="outlined"
               size="small"
+              required
             />
-          </p>
-          <p>
+          </Field>
+          <Field>
             <Button variant="contained" type="submit" onClick= {this.handleClick}>
               {this.state.text}
             </Button>
-            <div>
-                  {/* <span>Thank you for your message! I will get back to you as soon as possible.</span> */}
-            </div>
-          </p>
+          </Field>
         </form>
     )
   }
 }
+
+const Field = styled.p`
+  margin: 10px;
+`
 
 export default Form

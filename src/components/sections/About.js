@@ -5,7 +5,7 @@ import Img from 'gatsby-image';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
-import { Section, Container } from '@components/global';
+import { Section, Container, ImageBox } from '@components/global';
 
 const About = () => (
   <StaticQuery
@@ -71,9 +71,9 @@ const About = () => (
       <Section id="about">
         <Container>
           <Grid inverse>
-            <Art>
-              <Img fluid={data.ladies.childImageSharp.fluid} />
-            </Art>
+            <ImageBox>
+              <Art><Img fluid={data.ladies.childImageSharp.fluid} /></Art>
+            </ImageBox>
             <div>
               <h2>Our Story</h2>
               <p>
@@ -85,13 +85,11 @@ const About = () => (
             <div>
               <h2>Artist of the Month</h2>
               <h3>On Hold during COVID-19</h3>
-              <p>
-                
-              </p>
+              <p></p>
             </div>
-            <Art>
-              <Img fluid={data.artist.childImageSharp.fluid} />
-            </Art>
+            <ImageBox>
+              <Art><Img fluid={data.artist.childImageSharp.fluid} /></Art>
+            </ImageBox>
           </Grid>
           <Grid inverse>
             {/* <Carousel 
@@ -102,16 +100,16 @@ const About = () => (
               customTransition="all .5"
               transitionDuration={500}
             > */}
-            <Art><Img fluid={data.coworking.childImageSharp.fluid} /></Art>        
-            {/* <Art><Img fluid={data.coworking2.childImageSharp.fluid} /></Art> */}
-            {/* <Art><Img fluid={data.coworking3.childImageSharp.fluid} /></Art> */}
-            {/* </Carousel> */}
+              <ImageBox>
+                <Art><Img fluid={data.coworking.childImageSharp.fluid} /></Art>        
+                {/* <Art><Img fluid={data.coworking2.childImageSharp.fluid} /></Art> */}
+                {/* <Art><Img fluid={data.coworking3.childImageSharp.fluid} /></Art> */}
+                {/* </Carousel> */}
+              </ImageBox>
             <div>
               <h2>Coworking Space</h2>
               <h3>On Hold during COVID-19</h3>
-              <p>
-                
-              </p>
+              <p></p>
             </div>
           </Grid>
         </Container>
@@ -179,18 +177,12 @@ const Grid = styled.div`
 `;
 
 const Art = styled.figure`
-  margin: 0;
+  // margin: 0;
   max-width: 765px;
   width: 100%;
-`;
-
-const ImageBox = styled.div`
-  background-color: brown;
-  position:absolute;
-  top: 10px;
-  left: 10px;
-  height: 100px;
-  width:100px;
+  height: 100%;
+  margin-top: -30px;
+  margin-left: -20px;
 `;
 
 export default About;

@@ -35,12 +35,12 @@ const Footer = () => (
   <StaticQuery
     query={graphql`
       query {
-        art_pot: file(
-          sourceInstanceName: { eq: "art" }
-          name: { eq: "customers_pot" }
+        logo: file(
+          sourceInstanceName: { eq: "homepage" }
+          name: { eq: "logoroundwhite" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 960) {
+            fluid(maxWidth: 200) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
@@ -52,7 +52,7 @@ const Footer = () => (
         <FooterWrapper>
           <StyledContainer>
             <Copyright>
-              {/* Small logo here */}
+              <Img fluid={data.logo.childImageSharp.fluid} />
             </Copyright>
               <div>
                 <h2>Hours</h2>

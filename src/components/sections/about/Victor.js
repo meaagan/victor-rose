@@ -2,6 +2,8 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 import Img from 'gatsby-image'
+import { ImageBox } from '@components/global';
+
 
 const Victor = () => (
     <StaticQuery
@@ -28,17 +30,6 @@ const Victor = () => (
                 }
             }
             }
-
-            coworking: file(
-                sourceInstanceName: { eq: "homepage" }
-                name: { eq: "coworking" }
-            ) {
-            childImageSharp {
-                fluid(maxWidth: 800, maxHeight: 800) {
-                ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                }
-            }
-            }
         }
         `}
 
@@ -46,9 +37,9 @@ const Victor = () => (
             <div>
                 <h2 style={{textAlign: 'center'}}>VICTOR ROSE</h2>
                 <VictorContainer>
-                    <Art>
-                        <Img fluid={data.victorrose.childImageSharp.fluid} />
-                    </Art>
+                    <ImageBox>
+                        <Art><Img fluid={data.victorrose.childImageSharp.fluid} /></Art>
+                    </ImageBox>
                     <div>
                         <p>
                             Victor Rose was born in London England in 1897 died in 1989. 
@@ -64,9 +55,9 @@ const Victor = () => (
                     </div>
                 </VictorContainer>
                 <TrioContainer>
-                    <Trio><Img fluid={data.ladies.childImageSharp.fluid} /></Trio>
-                    <Trio><Img fluid={data.ladies.childImageSharp.fluid} /></Trio>
-                    <Trio><Img fluid={data.coworking.childImageSharp.fluid} /></Trio>
+                        <Trio><Img fluid={data.ladies.childImageSharp.fluid} /></Trio>
+                        <Trio><Img fluid={data.ladies.childImageSharp.fluid} /></Trio>
+                        <Trio><Img fluid={data.ladies.childImageSharp.fluid} /></Trio>
                 </TrioContainer>
             </div>
         )}
