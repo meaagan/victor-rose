@@ -25,7 +25,7 @@ const Victor = () => (
                 name: { eq: "victorrose" }
             ) {
             childImageSharp {
-                fluid(maxWidth: 800) {
+                fluid(maxWidth: 765) {
                 ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
             }
@@ -77,14 +77,23 @@ const Trio = styled.figure`
 `;
 
 const Art = styled.figure`
-    max-width: 500px;
+    max-width: 765px;
     width: 100%;
+    height: 100%;
+    margin-top: -30px;
+    margin-left: -20px;
 `;
 
 const VictorContainer = styled.div`
     display: flex;
     justify-content: space-around;
     align-items:center;
+
+    @media (max-width: ${props => props.theme.screen.sm}) {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+      }
 `
 
 export default Victor;
