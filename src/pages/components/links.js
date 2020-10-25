@@ -30,7 +30,6 @@ const StyledLink = styled.a`
 const CLink = styled.li`
   padding: 4px;
   padding-left:0;
-  
 `
 
 export default Links

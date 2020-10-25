@@ -4,7 +4,7 @@ import Layout from '@common/Layout';
 import  Form from './components/form';
 import { Section } from '@components/global';
 import Links  from './components/links'
-import LeafletMap from './components/leafletmap'
+import VRMap from './components/vrmap'
 
 const Contact = () => (
     <Layout>
@@ -13,22 +13,18 @@ const Contact = () => (
         <ContactContainer>
             <Left>
               <Links />
-                {typeof window !== 'undefined' &&
-                  <LeafletMap
-                    position={[45.430254, -73.823311]}
-                    zoom={20}
-                    markerText=""
-                  />
-                }
+              <VRMap />
             </Left>
-            <StyledForm />
+            <Right>
+              <Form />
+            </Right>
           </ContactContainer>
       </Section>
     </Layout>
 );
 
-const StyledForm = styled(Form)`
-  width: 60%;
+const Left = styled.div`
+  width: 40%;
 
   @media (max-width: ${props => props.theme.screen.sm}) {
     display: block;
@@ -36,8 +32,7 @@ const StyledForm = styled(Form)`
     margin: 0 auto;
   }
 `
-
-const Left = styled.div`
+const Right = styled.div`
   width: 40%;
 
   @media (max-width: ${props => props.theme.screen.sm}) {

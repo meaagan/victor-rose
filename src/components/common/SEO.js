@@ -35,7 +35,7 @@ const SEO = (props) => {
       <title>{SEO_DATA.title}</title>
       <html lang="en" />
 
-      <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+      <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.1/mapbox-gl.css' rel='stylesheet' />
     </Helmet>
   );
 };
