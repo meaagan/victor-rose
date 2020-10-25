@@ -63,7 +63,7 @@ class Form extends React.Component {
               variant="outlined"
               size="small"
               required
-            />   
+            />
           </Field>
           <Field>
             <TextField
@@ -98,7 +98,7 @@ class Form extends React.Component {
               id="outlined-multiline-static" 
               name="message"
               multiline
-              rows={4}
+              rows={8}
               variant="outlined"
               size="small"
               required

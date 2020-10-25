@@ -19,12 +19,14 @@ const Links = () => {
 
 const ContactLinks = styled.ul`
   list-style: none;
+  ${props => props.theme.font_size.regular};
+
 `
 
 const StyledLink = styled.a`
   background-image: linear-gradient(0deg, rgb(202, 157, 124) 50%, transparent 50%);
   text-decoration: none;
-  color: ${props => props.theme.color.black.regular};
+  color: inherit;
 `
 
 const CLink = styled.li`

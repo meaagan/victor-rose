@@ -34,6 +34,7 @@ const Left = styled.div`
 `
 const Right = styled.div`
   width: 40%;
+  margin-top: 12px;
 
   @media (max-width: ${props => props.theme.screen.sm}) {
     display: block;

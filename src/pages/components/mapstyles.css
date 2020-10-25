@@ -1,3 +1,4 @@
 .mapboxgl-canvas {
   height: 400px !important;
+  width: 80%;
 }
