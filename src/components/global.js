@@ -39,9 +39,7 @@ export const Section = styled.section`
 `;
 
 export const ImageBox = styled.div`
-  background: rgba(172,139,111,1);
-  max-width: 765px;
-  max-height: 765px;
+  background: #6A2B05;
   width: 100%;
   height: 100%;
   position: relative;

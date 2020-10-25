@@ -24,7 +24,7 @@ const Contact = () => (
 );
 
 const Left = styled.div`
-  width: 40%;
+  width: 35%;
 
   @media (max-width: ${props => props.theme.screen.sm}) {
     display: block;
@@ -33,7 +33,7 @@ const Left = styled.div`
   }
 `
 const Right = styled.div`
-  width: 40%;
+  width: 35%;
   margin-top: 12px;
 
   @media (max-width: ${props => props.theme.screen.sm}) {

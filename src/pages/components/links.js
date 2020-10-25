@@ -10,7 +10,7 @@ const Links = () => {
             <ContactLinks>
                 <CLink><span><FontAwesomeIcon icon={faMapMarkedAlt} /></span> 15C Cartier, Pointe-Claire, Quebec, H9S 4R5</CLink>
                 <CLink><span><FontAwesomeIcon icon={faPhone} /></span> (514) 447-2711</CLink>
-                <CLink><span><FontAwesomeIcon icon={faEnvelope} /></span> victorrose2015@gmail.com</CLink>
+                <CLink><span><FontAwesomeIcon icon={faEnvelope} /></span> <StyledLink href="mailto:victorrose2015@gmail.com">victorrose2015@gmail.com</StyledLink></CLink>
                 <CLink><span><FontAwesomeIcon icon={faFacebook} /></span> <StyledLink href="http://www.facebook.com/VictorRoseEspressoBar">/VictorRoseEspressoBar</StyledLink></CLink>
                 <CLink><span><FontAwesomeIcon icon={faInstagram} /></span> <StyledLink href="http://www.instagram.com/victorrose2015" target="_blank">@victorrose2015</StyledLink></CLink>
             </ContactLinks>
@@ -19,8 +19,8 @@ const Links = () => {
 
 const ContactLinks = styled.ul`
   list-style: none;
-  ${props => props.theme.font_size.regular};
-
+  font-size: 24px; 
+  line-height: 32px;
 `
 
 const StyledLink = styled.a`
