@@ -43,4 +43,20 @@ export const ImageBox = styled.div`
   width: 100%;
   height: 100%;
   position: relative;
+  background-position: 100px 5px; 
+`;
+
+export const TrioContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    margin: 10%;
+
+`
+
+export const Trio = styled.figure`
+    margin: 0;
+    max-width: 300px;
+    width: 100%;
+    margin-top: -10px;
+    margin-left: -20px;
 `;

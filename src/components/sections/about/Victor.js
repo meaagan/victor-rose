@@ -2,7 +2,7 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 import Img from 'gatsby-image'
-import { ImageBox } from '@components/global';
+import { ImageBox, TrioContainer, Trio } from '@components/global';
 
 
 const Victor = () => (
@@ -40,7 +40,7 @@ const Victor = () => (
                     <ImageBox>
                         <Art><Img fluid={data.victorrose.childImageSharp.fluid} /></Art>
                     </ImageBox>
-                    <div>
+                    <div style={{margin:'15px'}}>
                         <p>
                             Victor Rose was born in London England in 1897 died in 1989. 
                             After serving in the trenches in the First World War he came 
@@ -54,27 +54,10 @@ const Victor = () => (
                         </p>
                     </div>
                 </VictorContainer>
-                <TrioContainer>
-                        <Trio><Img fluid={data.ladies.childImageSharp.fluid} /></Trio>
-                        <Trio><Img fluid={data.ladies.childImageSharp.fluid} /></Trio>
-                        <Trio><Img fluid={data.ladies.childImageSharp.fluid} /></Trio>
-                </TrioContainer>
             </div>
         )}
     />
 );
-
-const TrioContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    margin: 10%;
-`
-
-const Trio = styled.figure`
-    margin: 0;
-    max-width: 300px;
-    width: 100%;
-`;
 
 const Art = styled.figure`
     max-width: 765px;
@@ -86,8 +69,10 @@ const Art = styled.figure`
 
 const VictorContainer = styled.div`
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items:center;
+    margin: 15px;
+
 
     @media (max-width: ${props => props.theme.screen.sm}) {
         display: block;

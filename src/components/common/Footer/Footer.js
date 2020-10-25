@@ -2,6 +2,9 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
+import styled from 'styled-components';
+
+import './footer.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons'
@@ -97,6 +100,5 @@ const Footer = () => (
     )}
   />
 );
-
 
 export default Footer;

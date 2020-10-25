@@ -40,7 +40,7 @@ const Announcements = () => (
 );
 
 const StyledContainer = styled(BackgroundImage)`
-  height: 25vh;
+  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;

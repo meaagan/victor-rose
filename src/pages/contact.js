@@ -1,26 +1,49 @@
 import React from 'react';
 import styled from 'styled-components';
 import Layout from '@common/Layout';
-import  Form from './components/form';
-import { Section } from '@components/global';
+import Form from './components/form';
+import { StaticQuery, graphql } from 'gatsby';
+import { TrioContainer, Trio } from '@components/global';
 import Links  from './components/links'
 import VRMap from './components/vrmap'
+import Img from 'gatsby-image';
 
 const Contact = () => (
-    <Layout>
-      <Section>
-        <h1 style={{textAlign: 'center'}}>Contact</h1>
-        <ContactContainer>
-            <Left>
-              <Links />
-              <VRMap />
-            </Left>
-            <Right>
-              <Form />
-            </Right>
-          </ContactContainer>
-      </Section>
-    </Layout>
+  <StaticQuery
+    query={graphql`
+      query {
+        ladies: file(
+          sourceInstanceName: { eq: "homepage" }
+          name: { eq: "ladies" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 800, maxHeight: 800) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
+        }
+    `}
+    render={data => (
+      <Layout>
+          <h1 style={{textAlign: 'center', paddingTop:'125px'}}>Contact</h1>
+          <ContactContainer>
+              <Left>
+                <Links />
+                <VRMap />
+              </Left>
+              <Right>
+                <Form />
+              </Right>
+            </ContactContainer>
+            <TrioContainer>
+              <Trio><Img fluid={data.ladies.childImageSharp.fluid} /></Trio>
+              <Trio><Img fluid={data.ladies.childImageSharp.fluid} /></Trio>
+              <Trio><Img fluid={data.ladies.childImageSharp.fluid} /></Trio>
+            </TrioContainer>
+      </Layout>
+    )}
+  />
 );
 
 const Left = styled.div`
