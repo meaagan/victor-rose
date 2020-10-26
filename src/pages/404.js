@@ -1,14 +1,13 @@
 import React from 'react';
 
 import Layout from '@common/Layout';
-import { Container } from '@components/global';
+import { Section } from '@components/global';
 
 const NotFoundPage = () => (
   <Layout>
-    <Container>
-      <h1>NOT FOUND</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-    </Container>
+    <Section>
+      <h1>PAGE NOT FOUND</h1>
+    </Section>
   </Layout>
 );
 

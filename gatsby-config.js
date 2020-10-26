@@ -2,6 +2,15 @@ const path = require('path');
 
 module.exports = {
   plugins: [
+    {
+      resolve: `gatsby-plugin-i18n`,
+      options: {
+        langKeyDefault: 'en',
+        langKeyForNull: 'en',
+        prefixDefault: false,
+        useLangKeyLayout: false,
+      },
+    },
     `gatsby-plugin-material-ui`,
     {
       resolve: `gatsby-source-instagram`,
