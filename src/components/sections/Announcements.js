@@ -29,7 +29,7 @@ const Announcements = () => (
         >
           <TextBox>
             <h1>Announcements</h1>
-            <p>
+            <p style={{color: 'white'}}>
               Lorem ipsum dolor amet
             </p>
           </TextBox>
@@ -41,10 +41,7 @@ const Announcements = () => (
 
 const StyledContainer = styled(BackgroundImage)`
   height: 50vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+
 
   @media (max-width: ${props => props.theme.screen.md}) {
     justify-content: center;
@@ -52,8 +49,15 @@ const StyledContainer = styled(BackgroundImage)`
 `;
 
 const TextBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;  
   color: ${props => props.theme.color.white.regular}; 
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+  width:100%;
+  height:100%;
 `;
 
 export default Announcements;
