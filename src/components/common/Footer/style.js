@@ -31,7 +31,7 @@ export const FooterWrapper = styled.footer`
   padding: 32px 0;
   position: static;
   bottom: 0;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
 `;
 
