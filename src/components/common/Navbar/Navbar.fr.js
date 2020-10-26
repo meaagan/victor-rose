@@ -13,9 +13,9 @@ import {
   StyledLink } from "./style"
 
 const navLinks = [
-  { title: `about`, path: `/about` },
+  { title: `À Propos`, path: `/fr/about` },
   { title: `menu`, path: `/menu` },
-  { title: `contact`, path: `/contact` },
+  { title: `contact`, path: `/fr/contact` },
 ]
 
 const Navbar = () => {
@@ -24,13 +24,13 @@ const Navbar = () => {
       <AppBarStyled position="fixed">
         <Toolbar style={{backgroundColor: 'white'}}>
           <NavContainer maxWidth="md" style={{display:'flex'}}>
-            <Brand><HomeLink to="/">VICTOR ROSE</HomeLink></Brand>
+            <Brand><HomeLink to="/fr">VICTOR ROSE</HomeLink></Brand>
             <Hidden smDown>
               <NavbarList component="nav" aria-labelledby="main navigation">
-                <StyledLink to='/about' key='about' style={{backgroundImage: 'linear-gradient(0deg, rgb(202,157,124) 50%, transparent 50%)'}}>About</StyledLink>
+                <StyledLink to='/fr/about' key='about' style={{backgroundImage: 'linear-gradient(0deg, rgb(202,157,124) 50%, transparent 50%)'}}>À Propos</StyledLink>
                 <StyledLink to='/menu' key='menu' style={{backgroundImage: 'linear-gradient(0deg, rgb(233,203,167) 50%, transparent 50%)'}}>Menu</StyledLink>
-                <StyledLink to='/contact' key='contact' style={{backgroundImage: 'linear-gradient(0deg, rgb(245,238,220) 50%, transparent 50%)'}}>Contact</StyledLink>
-                <StyledLink to='/fr' key='home'>Français</StyledLink>
+                <StyledLink to='/fr/contact' key='contact' style={{backgroundImage: 'linear-gradient(0deg, rgb(245,238,220) 50%, transparent 50%)'}}>Contact</StyledLink>
+                <StyledLink to='/' key='home'>English</StyledLink>
               </NavbarList>
             </Hidden>
             <Hidden mdUp>

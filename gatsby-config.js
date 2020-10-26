@@ -8,7 +8,6 @@ module.exports = {
         langKeyDefault: 'en',
         langKeyForNull: 'en',
         prefixDefault: false,
-        useLangKeyLayout: false,
       },
     },
     `gatsby-plugin-material-ui`,

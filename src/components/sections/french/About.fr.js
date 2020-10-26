@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import Coworking from '@sections/components/coworking'
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 import { Section, Container, ImageBox } from '@components/global';
 
@@ -31,6 +32,39 @@ const About = () => (
             }
           }
         }
+
+        coworking2: file(
+          sourceInstanceName: { eq: "homepage" }
+          name: { eq: "coworking2" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 800, maxHeight: 800) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
+
+        coworking3: file(
+          sourceInstanceName: { eq: "homepage" }
+          name: { eq: "coworking3" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 800, maxHeight: 800) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
+
+        coworking: file(
+          sourceInstanceName: { eq: "homepage" }
+          name: { eq: "coworking" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 800, maxHeight: 800) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
       }
     `}
     render={data => (
@@ -41,16 +75,16 @@ const About = () => (
               <Art><Img fluid={data.ladies.childImageSharp.fluid} /></Art>
             </ImageBox>
             <div>
-              <h2>Our Story</h2>
+              <h2>Notre Histoire</h2>
               <p>
-              Victor Rose Espresso Bar in Pointe-Claire Village is a Direct Fair Trade Coffee Shop run by local mother daughter duo, Marie & Terry. A community spot to meet your friends, or grab your morning coffee on the way to work!
+                Le Victor Rose Espresso Bar du village de Pointe-Claire est un café du commerce équitable dirigé par le duo mère-fille de la région, Marie & Terry. Un lieu communautaire pour rencontrer vos amis ou prendre votre café du matin sur le chemin du travail!
               </p>
             </div>
           </Grid>
           <Grid>
             <div>
-              <h2>Artist of the Month</h2>
-              <h3>On Hold during COVID-19</h3>
+              <h2>Artist du Mois</h2>
+              <h3>Sur pause durant COVID-19</h3>
               <p></p>
             </div>
             <ImageBox>
@@ -58,10 +92,23 @@ const About = () => (
             </ImageBox>
           </Grid>
           <Grid inverse>
-            <Coworking />
+            {/* <Carousel 
+              swipeable={false}
+              responsive={responsive}
+              ssr={true}
+              keyBoardControl={true}
+              customTransition="all .5"
+              transitionDuration={500}
+            > */}
+              <ImageBox>
+                <Art><Img fluid={data.coworking.childImageSharp.fluid} /></Art>        
+                {/* <Art><Img fluid={data.coworking2.childImageSharp.fluid} /></Art> */}
+                {/* <Art><Img fluid={data.coworking3.childImageSharp.fluid} /></Art> */}
+                {/* </Carousel> */}
+              </ImageBox>
             <div>
-              <h2>Coworking Space</h2>
-              <h3>On Hold during COVID-19</h3>
+              <h2>Espace Travail Commun</h2>
+              <h3>Sur pause durant COVID-19</h3>
               <p></p>
             </div>
           </Grid>
@@ -130,6 +177,7 @@ const Grid = styled.div`
 `;
 
 const Art = styled.figure`
+  // margin: 0;
   max-width: 765px;
   width: 100%;
   height: 100%;
