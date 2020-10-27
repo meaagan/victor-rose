@@ -40,17 +40,19 @@ export const Section = styled.section`
 
 export const ImageBox = styled.div`
   background: #6A2B05;
-  width: 100%;
+  width: 90%;
   height: 100%;
   position: relative;
   background-position: 100px 5px; 
+  @media (max-width: ${props => props.theme.screen.md}) {
+    order: 2;
+  }
 `;
 
 export const TrioContainer = styled.div`
     display: flex;
     justify-content: center;
     margin: 10%;
-
 `
 
 export const Trio = styled.figure`

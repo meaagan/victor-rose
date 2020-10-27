@@ -40,30 +40,30 @@ const About = () => (
             <ImageBox>
               <Art><Img fluid={data.ladies.childImageSharp.fluid} /></Art>
             </ImageBox>
-            <div>
+            <FlipText>
               <h2>Our Story</h2>
               <p>
               Victor Rose Espresso Bar in Pointe-Claire Village is a Direct Fair Trade Coffee Shop run by local mother daughter duo, Marie & Terry. A community spot to meet your friends, or grab your morning coffee on the way to work!
               </p>
-            </div>
+            </FlipText>
           </Grid>
           <Grid>
-            <div>
+            <FlipText>
               <h2>Artist of the Month</h2>
               <h3>On Hold during COVID-19</h3>
               <p></p>
-            </div>
+            </FlipText>
             <ImageBox>
               <Art><Img fluid={data.artist.childImageSharp.fluid} /></Art>
             </ImageBox>
           </Grid>
           <Grid inverse>
-            <Coworking />
-            <div>
+            <OrderCarousel />
+            <FlipText>
               <h2>Coworking Space</h2>
               <h3>On Hold during COVID-19</h3>
               <p></p>
-            </div>
+            </FlipText>
           </Grid>
         </Container>
       </Section>
@@ -120,12 +120,8 @@ const Grid = styled.div`
     }
 
     ${props =>
-      props.inverse &&
-      `
-        ${Art} {
-          order: 2;
-        }
-    `}
+      props.inverse
+    }
   }
 `;
 
@@ -135,6 +131,22 @@ const Art = styled.figure`
   height: 100%;
   margin-top: -30px;
   margin-left: -20px;
+
+  @media (max-width: ${props => props.theme.screen.md}) {
+    order: 2;
+  }
 `;
+
+const FlipText = styled.div`
+  @media (max-width: ${props => props.theme.screen.md}) {
+    order: 1;
+  }
+`
+
+const OrderCarousel = styled(Coworking)`
+  @media (max-width: ${props => props.theme.screen.md}) {
+    order: 2;
+  }
+`
 
 export default About;
