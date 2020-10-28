@@ -40,7 +40,7 @@ const Victor = () => (
                     <ImageBox>
                         <Art><Img fluid={data.victorrose.childImageSharp.fluid} /></Art>
                     </ImageBox>
-                    <div style={{margin:'15px'}}>
+                    <VictorText>
                         <p>
                             Victor Rose was born in London England in 1897 died in 1989. 
                             After serving in the trenches in the First World War he came 
@@ -52,7 +52,7 @@ const Victor = () => (
                             a father, a grandfather and always an artist. Victor Rose was a 
                             founding member of the Lakeshore Artist Association.
                         </p>
-                    </div>
+                    </VictorText>
                 </VictorContainer>
             </div>
         )}
@@ -65,18 +65,37 @@ const Art = styled.figure`
     height: 100%;
     margin-top: -30px;
     margin-left: -20px;
+    
+
+    @media (max-width: ${props => props.theme.screen.md}) {
+        display: inline-block;
+        margin: 0 auto;
+        width:100%;
+        margin-top: -30px;
+        margin-left: -10px;
+      }
 `;
+
+const VictorText = styled.div`
+width: 70%;
+    @media (max-width: ${props => props.theme.screen.md}) {
+        margin:0 auto;
+        width:100%;
+        margin-bottom: 40px;
+    }
+`
 
 const VictorContainer = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items:center;
-    margin: 15px;
+    // margin: 15px;
+    overflow: visible;
 
-
-    @media (max-width: ${props => props.theme.screen.sm}) {
-        display: block;
-        width: 90%;
+    @media (max-width: ${props => props.theme.screen.md}) {
+        display: flex;
+        flex-direction:column;
+        width: 70%;
         margin: 0 auto;
       }
 `

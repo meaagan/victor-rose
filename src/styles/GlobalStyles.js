@@ -71,6 +71,11 @@ const GlobalStyles = createGlobalStyle`
   a {
     cursor: pointer;
   }
+
+  a:hover {
+    text-decoration: none;
+    color: ${props => props.theme.color.black.regular};
+  }
 `;
 
 export default GlobalStyles;

@@ -2,8 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+import Coworking from '@sections/components/coworking'
 
 import { Section, Container, ImageBox } from '@components/global';
 
@@ -92,20 +91,7 @@ const About = () => (
             </ImageBox>
           </Grid>
           <Grid inverse>
-            {/* <Carousel 
-              swipeable={false}
-              responsive={responsive}
-              ssr={true}
-              keyBoardControl={true}
-              customTransition="all .5"
-              transitionDuration={500}
-            > */}
-              <ImageBox>
-                <Art><Img fluid={data.coworking.childImageSharp.fluid} /></Art>        
-                {/* <Art><Img fluid={data.coworking2.childImageSharp.fluid} /></Art> */}
-                {/* <Art><Img fluid={data.coworking3.childImageSharp.fluid} /></Art> */}
-                {/* </Carousel> */}
-              </ImageBox>
+            <OrderCarousel />
             <div>
               <h2>Espace Travail Commun</h2>
               <h3>Sur pause durant COVID-19</h3>
@@ -175,6 +161,12 @@ const Grid = styled.div`
     `}
   }
 `;
+
+const OrderCarousel = styled(Coworking)`
+  @media (max-width: ${props => props.theme.screen.md}) {
+    order: 2;
+  }
+`
 
 const Art = styled.figure`
   // margin: 0;

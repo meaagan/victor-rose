@@ -48,28 +48,18 @@ const Coworking = () => (
         render={data=> (
                 <Carousel indicators={false}>
                     <Carousel.Item>
-                        <Art><Img className="d-block w-100" fluid={data.coworking.childImageSharp.fluid}  /></Art>
+                        <Img className="d-block w-100" fluid={data.coworking.childImageSharp.fluid}  />
                     </Carousel.Item>
                     <Carousel.Item>
-                        <Art><Img className="d-block w-100" fluid={data.coworking2.childImageSharp.fluid} /></Art>
+                        <Img className="d-block w-100" fluid={data.coworking2.childImageSharp.fluid} />
                     </Carousel.Item>
                     <Carousel.Item>
-                        <Art><Img className="d-block w-100" fluid={data.coworking3.childImageSharp.fluid} /></Art>
+                        <Img className="d-block w-100" fluid={data.coworking3.childImageSharp.fluid} />
                     </Carousel.Item>
                 </Carousel>
     )}
     />
 )
-
-
-
-const Art = styled.figure`
-    max-width: 765px;
-    width: 100%;
-    height: 100%;
-    // margin-top: -30px;
-    // margin-left: -20px;
-`;
 
 export default Coworking;
 
