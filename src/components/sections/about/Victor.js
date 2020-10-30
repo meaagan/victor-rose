@@ -1,9 +1,7 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import styled from 'styled-components';
 import Img from 'gatsby-image'
-import { ImageBox, TrioContainer, Trio } from '@components/global';
-
+import { Art, VictorText, VicImg, Box, VictorContainer } from './style'
 
 const Victor = () => (
     <StaticQuery
@@ -34,13 +32,13 @@ const Victor = () => (
         `}
 
         render={data => (
-            <div>
-                <h2 style={{textAlign: 'center'}}>VICTOR ROSE</h2>
                 <VictorContainer>
-                    <ImageBox>
-                        <Art><Img fluid={data.victorrose.childImageSharp.fluid} /></Art>
-                    </ImageBox>
+                    <VicImg>
+                        <Art><Img fluid={data.victorrose.childImageSharp.fluid} style={{zIndex:'1'}} /></Art>
+                        <Box></Box>
+                    </VicImg>
                     <VictorText>
+                        <h2>VICTOR ROSE</h2>
                         <p>
                             Victor Rose was born in London England in 1897 died in 1989. 
                             After serving in the trenches in the First World War he came 
@@ -54,50 +52,8 @@ const Victor = () => (
                         </p>
                     </VictorText>
                 </VictorContainer>
-            </div>
         )}
     />
 );
-
-const Art = styled.figure`
-    max-width: 765px;
-    width: 100%;
-    height: 100%;
-    margin-top: -30px;
-    margin-left: -20px;
-    
-
-    @media (max-width: ${props => props.theme.screen.md}) {
-        display: inline-block;
-        margin: 0 auto;
-        width:100%;
-        margin-top: -30px;
-        margin-left: -10px;
-      }
-`;
-
-const VictorText = styled.div`
-width: 70%;
-    @media (max-width: ${props => props.theme.screen.md}) {
-        margin:0 auto;
-        width:100%;
-        margin-bottom: 40px;
-    }
-`
-
-const VictorContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    // margin: 15px;
-    overflow: visible;
-
-    @media (max-width: ${props => props.theme.screen.md}) {
-        display: flex;
-        flex-direction:column;
-        width: 70%;
-        margin: 0 auto;
-      }
-`
 
 export default Victor;

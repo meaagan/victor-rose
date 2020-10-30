@@ -18,16 +18,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-svgr`,
-      options: {
-        svgoConfig: {
-          plugins: {
-            removeViewBox: false,
-          },
-        },
-      },
-    },
     `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-styled-components`,
     {
@@ -35,6 +25,13 @@ module.exports = {
       options: {
         name: `homepage`,
         path: `${__dirname}/src/images/homepage`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `static`,
+        path: `${__dirname}/static`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -74,7 +71,7 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /\.inline\.svg$/,
+          include: /static/
         },
       }
     }
