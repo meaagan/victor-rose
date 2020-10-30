@@ -51,7 +51,7 @@ const Instagram = () => {
     return (
         <Section id="instagram">
             <Container>
-                <h2>Follow us on Instagram</h2>
+              <h2 style={{paddingBottom: '5%'}}>Follow us on Instagram</h2>
                 <StyledCarousel
                     swipeable={true}
                     centerMode={true}
