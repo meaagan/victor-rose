@@ -7,7 +7,7 @@ const SEO_DATA = {
   url: 'www.victorrose.com',
   author: 'Victor Rose',
   keywords: ['coffee', 'cafe', 'pointe-claire', 'victor rose', 'local', 'coffee shop', 'cafe','espresso bar', 'Direct Fair Trade', ' Third Wave', 'local artists','espresso'],
-  img: '',
+  img: 'https://scontent.fymq1-1.fna.fbcdn.net/v/t1.0-9/34533775_2239226076304640_1327213188738973696_o.jpg?_nc_cat=100&ccb=2&_nc_sid=e3f864&_nc_ohc=jLsAqTd2dO0AX85gA-R&_nc_ht=scontent.fymq1-1.fna&oh=702fc36072d1d61a09e83ab91e86738e&oe=5FC3CE9D',
   facebookId: 'VictorRoseEspressoBar',
 };
 

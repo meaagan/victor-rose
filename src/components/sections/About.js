@@ -1,6 +1,5 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
 
 import BoxedImage from '@sections/components/boxedimage'
 import { Grid, OrderCarousel, FlipText } from './style'

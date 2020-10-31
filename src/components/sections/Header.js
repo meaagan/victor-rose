@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import { StaticQuery, graphql } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image';
  
-const Header = () => (
-  <StaticQuery
-    query={graphql`
+const Header = () => {
+  const { mobile, desktop } = useStaticQuery(
+    graphql`
       query {
-        header: file(
+        desktop: file(
           sourceInstanceName: { eq: "homepage" }
           name: { eq: "coverphoto2" }
         ) {
@@ -17,22 +17,41 @@ const Header = () => (
             }
           }
         }
+
+        mobile: file(
+          sourceInstanceName: { eq: "homepage" }
+          name: { eq: "window" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 3000) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
+
       }
-    `}
-    render={data => {
-      const imageData = data.header.childImageSharp.fluid
-      return(
-        <HeaderWrapper>
-          <Parallax
-            Tag="section"
-            fluid= {imageData}
-          >
-          </Parallax>
-        </HeaderWrapper>
-      )
-    }}
-  />
-);
+    `)
+
+  const sources = [
+    mobile.childImageSharp.fluid,
+    {
+      ...desktop.childImageSharp.fluid,
+      media: `(min-width: 491px)`,
+    },
+  ]
+
+  return(
+    <HeaderWrapper>
+      <Parallax
+        Tag="section"
+        fluid= {sources}
+      >
+      </Parallax>
+    </HeaderWrapper>
+  )
+};
+
+
 
 const Parallax = styled(BackgroundImage)`
   background-attachment: fixed; 

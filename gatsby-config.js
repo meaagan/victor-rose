@@ -73,7 +73,7 @@ module.exports = {
         background_color: `#DECAB2`,
         theme_color: `#DECAB2`,
         display: `minimal-ui`,
-        icon: `static/favicon.svg`,
+        icon: `static/favicon.png`,
       },
     },
     {

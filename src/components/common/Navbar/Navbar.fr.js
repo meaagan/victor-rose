@@ -14,7 +14,7 @@ import {
 
 const navLinks = [
   { title: `À Propos`, path: `/fr/about` },
-  { title: `menu`, path: `/menu` },
+  // { title: `menu`, path: `/menu` },
   { title: `contact`, path: `/fr/contact` },
 ]
 
@@ -28,7 +28,7 @@ const Navbar = () => {
             <Hidden smDown>
               <NavbarList component="nav" aria-labelledby="main navigation">
                 <StyledLink to='/fr/about' key='about' style={{backgroundImage: 'linear-gradient(0deg, rgb(202,157,124) 50%, transparent 50%)'}}>À Propos</StyledLink>
-                <StyledLink to='/menu' key='menu' style={{backgroundImage: 'linear-gradient(0deg, rgb(233,203,167) 50%, transparent 50%)'}}>Menu</StyledLink>
+                {/* <StyledLink to='/menu' key='menu' style={{backgroundImage: 'linear-gradient(0deg, rgb(233,203,167) 50%, transparent 50%)'}}>Menu</StyledLink> */}
                 <StyledLink to='/fr/contact' key='contact' style={{backgroundImage: 'linear-gradient(0deg, rgb(245,238,220) 50%, transparent 50%)'}}>Contact</StyledLink>
                 <StyledLink to='/' key='home'>English</StyledLink>
               </NavbarList>
