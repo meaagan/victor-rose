@@ -2,16 +2,17 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
-import { Grid, OrderCarousel, Art, FlipText, BoxContainer, Box } from './style'
+import BoxedImage from '@sections/components/boxedimage'
+import { Grid, OrderCarousel, FlipText } from './style'
 import { Section, Container } from '@components/global';
 
 const About = () => (
   <StaticQuery
     query={graphql`
       query {
-        ladies: file(
+        story: file(
           sourceInstanceName: { eq: "homepage" }
-          name: { eq: "ladies" }
+          name: { eq: "happyholidays" }
         ) {
           childImageSharp {
             fluid(maxWidth: 800, maxHeight: 800) {
@@ -20,9 +21,9 @@ const About = () => (
           }
         }
 
-        artist: file(
+        artist1: file(
           sourceInstanceName: { eq: "homepage" }
-          name: { eq: "artist" }
+          name: { eq: "art2" }
         ) {
           childImageSharp {
             fluid(maxWidth: 800, maxHeight: 800) {
@@ -30,16 +31,25 @@ const About = () => (
             }
           }
         }
+
+        artist2: file(
+          sourceInstanceName: { eq: "homepage" }
+          name: { eq: "art8" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 800, maxHeight: 800) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
+
       }
     `}
     render={data => (
       <Section id="about">
         <Container>
           <Grid inverse>
-            <BoxContainer>
-                <Art><Img fluid={data.ladies.childImageSharp.fluid}  style={{zIndex:'1'}} /></Art>
-              <Box></Box>
-            </BoxContainer>
+            <BoxedImage image={data.story.childImageSharp.fluid} />
             <FlipText>
               <h2>Our Story</h2>
               <p>
@@ -53,10 +63,7 @@ const About = () => (
               <h3>On Hold during COVID-19</h3>
               <p></p>
             </FlipText>
-            <BoxContainer>
-                <Art><Img fluid={data.artist.childImageSharp.fluid} style={{zIndex:'1'}} /></Art>
-              <Box></Box>
-            </BoxContainer>
+            <BoxedImage image={data.artist1.childImageSharp.fluid} />
           </Grid>
           <Grid inverse>
             <OrderCarousel />

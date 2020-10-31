@@ -11,7 +11,7 @@ const Announcements = () => (
       query {
         announcements: file(
           sourceInstanceName: { eq: "homepage" }
-          name: { eq: "announcements" }
+          name: { eq: "threetypesofcoffee" }
         ) {
           childImageSharp {
             fluid(maxWidth: 3000 maxHeight: 800) {

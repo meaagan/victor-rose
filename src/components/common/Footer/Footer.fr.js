@@ -39,7 +39,7 @@ const Footer = () => (
     query={graphql`
       query {
         logo: file(
-          sourceInstanceName: { eq: "homepage" }
+          sourceInstanceName: { eq: "footer" }
           name: { eq: "logoroundwhite" }
         ) {
           childImageSharp {

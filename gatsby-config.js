@@ -30,6 +30,34 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `contact`,
+        path: `${__dirname}/src/images/contact`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `about`,
+        path: `${__dirname}/src/images/about`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `footer`,
+        path: `${__dirname}/src/images/footer`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `coworking`,
+        path: `${__dirname}/src/images/coworking`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `static`,
         path: `${__dirname}/static`,
       },

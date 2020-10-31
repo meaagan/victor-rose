@@ -7,9 +7,9 @@ const Header = () => (
   <StaticQuery
     query={graphql`
       query {
-        cheers: file(
+        header: file(
           sourceInstanceName: { eq: "homepage" }
-          name: { eq: "cheers" }
+          name: { eq: "coverphoto2" }
         ) {
           childImageSharp {
             fluid(maxWidth: 3000) {
@@ -20,7 +20,7 @@ const Header = () => (
       }
     `}
     render={data => {
-      const imageData = data.cheers.childImageSharp.fluid
+      const imageData = data.header.childImageSharp.fluid
       return(
         <HeaderWrapper>
           <Parallax

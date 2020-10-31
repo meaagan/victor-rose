@@ -34,7 +34,7 @@ const Victor = () => (
         render={data => (
                 <VictorContainer>
                     <VicImg>
-                        <Art><Img fluid={data.victorrose.childImageSharp.fluid} style={{zIndex:'1'}} /></Art>
+                        {/* <Art><Img fluid={data.victorrose.childImageSharp.fluid} style={{zIndex:'1'}} /></Art> */}
                         <Box></Box>
                     </VicImg>
                     <VictorText>
