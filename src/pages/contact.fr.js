@@ -1,13 +1,12 @@
 import React from 'react';
+import styled from 'styled-components';
 import Layout from '@common/Layout.fr';
 import Form from './components/form.fr';
 import { StaticQuery, graphql } from 'gatsby';
 import { Section, Container } from '@components/global';
 import Links  from './components/links'
 import VRMap from './components/vrmap'
-import styled from 'styled-components';
 import Triptych from '@components/common/Triptych'
-import { Left, Right, ContactContainer} from './contactstyles'
 
 const Contact = () => (
   <StaticQuery
@@ -69,6 +68,7 @@ const Contact = () => (
     )}
   />
 );
+
 const Left = styled.div`
   width: 50%;
   margin-top: 12px;
@@ -78,16 +78,16 @@ const Left = styled.div`
     width: 100%;
     margin: 0 auto;
   }
-`;
+`
 const Right = styled.div`
-  width: 45%;
+width: 45%;
 
   @media (max-width: ${props => props.theme.screen.sm}) {
     display: block;
     width: 100%;
     margin: 0 auto;
   }
-`;
+`
 
 const ContactContainer = styled.div`
     display: flex;
@@ -102,6 +102,5 @@ const ContactContainer = styled.div`
     width: 90%;
     margin: 0 auto;
   }
-`;
-
+`
 export default Contact;
