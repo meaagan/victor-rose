@@ -9,7 +9,7 @@ import Instagram from '@sections/Instagram'
 const IndexPage = () => (
   <Layout>
     <Header />
-    <Announcements />
+    {/* <Announcements /> */}
     <About />
     <Instagram />
   </Layout>
