@@ -7,20 +7,9 @@ const Victor = () => (
     <StaticQuery
         query={graphql`
         query {
-            ladies: file(
-                sourceInstanceName: { eq: "homepage" }
-                name: { eq: "ladies" }
-            ) {
-            childImageSharp {
-                fluid(maxWidth: 800, maxHeight: 800) {
-                ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                }
-            }
-            }
-
             victorrose: file(
-                sourceInstanceName: { eq: "homepage" }
-                name: { eq: "victorrose" }
+                sourceInstanceName: { eq: "about" }
+                name: { eq: "VictorRose" }
             ) {
             childImageSharp {
                 fluid(maxWidth: 765) {
@@ -34,7 +23,7 @@ const Victor = () => (
         render={data => (
                 <VictorContainer>
                     <VicImg>
-                        {/* <Art><Img fluid={data.victorrose.childImageSharp.fluid} style={{zIndex:'1'}} /></Art> */}
+                        <Art><Img fluid={data.victorrose.childImageSharp.fluid} style={{zIndex:'1'}} /></Art>
                         <Box></Box>
                     </VicImg>
                     <VictorText>

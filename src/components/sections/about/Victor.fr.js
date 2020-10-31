@@ -9,8 +9,8 @@ const Victor = () => (
         query={graphql`
         query {
             victorrose: file(
-                sourceInstanceName: { eq: "homepage" }
-                name: { eq: "victorrose" }
+                sourceInstanceName: { eq: "about" }
+                name: { eq: "VictorRose" }
             ) {
             childImageSharp {
                 fluid(maxWidth: 765) {
@@ -24,7 +24,7 @@ const Victor = () => (
         render={data => (
             <VictorContainer>
                     <VicImg>
-                        {/* <Art><Img fluid={data.victorrose.childImageSharp.fluid} style={{zIndex:'1'}} /></Art> */}
+                        <Art><Img fluid={data.victorrose.childImageSharp.fluid} style={{zIndex:'1'}} /></Art>
                         <Box></Box>
                     </VicImg>
                     <VictorText>
