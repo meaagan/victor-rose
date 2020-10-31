@@ -2,7 +2,6 @@ import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
 import StyledCarousel from '@components/common/StyledCarousel'
 import { StaticQuery, graphql } from 'gatsby';
-import styled from 'styled-components';
 import Img from 'gatsby-image'
 
 const Coworking = () => (
@@ -162,24 +161,6 @@ const Coworking = () => (
     )}
     />
 )
-
-const BoxContainer = styled.div`
-    position: relative;
-    width: 100%;
-    @media (max-width: ${props => props.theme.screen.md}) {
-        order: 2;
-        width:90%;
-    }
-`
-
-const Box = styled.div`
-    background-color: ${props => props.theme.color.box};
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    left: 15px;
-    top: 15px;
-`
 
 export default Coworking;
 

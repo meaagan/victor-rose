@@ -60,7 +60,7 @@ const Instagram = () => {
                 >
                   {instaPosts.map(({ node }) => {
                       return(
-                        <a href="http://www.instagram.com/victorrose2015" target="_blank">
+                        <a href="http://www.instagram.com/victorrose2015" target="_blank" rel="noreferrer">
                           <Img fixed = {node.localFile.childImageSharp.fixed} />
                         </a>
                       )
