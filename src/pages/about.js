@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { StaticQuery, graphql } from 'gatsby';
 import Layout from '@common/Layout';
 import { Container, Section } from '@components/global';
@@ -51,8 +50,8 @@ const About = () => (
           <Layout>
             <Container>
               <Section>
-                <Victor />
-                <Triptych pic1={data.pic1.childImageSharp.fluid} pic2={data.pic2.childImageSharp.fluid} pic3={data.pic3.childImageSharp.fluid}/>
+                  <Victor />
+                  <Triptych pic1={data.pic1.childImageSharp.fluid} pic2={data.pic2.childImageSharp.fluid} pic3={data.pic3.childImageSharp.fluid}/>
               </Section>
             </Container>
           </Layout>

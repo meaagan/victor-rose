@@ -1,6 +1,6 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-
+import Fade from 'react-reveal/Fade';
 import BoxedImage from '@sections/components/boxedimage'
 import { Grid, OrderCarousel, FlipText } from '../style'
 import { Section, Container } from '@components/global';
@@ -47,6 +47,7 @@ const About = () => (
     render={data => (
       <Section id="about">
         <Container>
+          <Fade left>
           <Grid inverse>
             <BoxedImage image={data.story.childImageSharp.fluid} />
             <FlipText>
@@ -56,6 +57,8 @@ const About = () => (
               </p>
             </FlipText>
           </Grid>
+          </Fade>
+          <Fade right>
           <Grid>
             <FlipText>
             <h2>Artist du Mois</h2>
@@ -64,6 +67,8 @@ const About = () => (
             </FlipText>
             <BoxedImage image={data.artist1.childImageSharp.fluid} />
           </Grid>
+          </Fade>
+          <Fade left>
           <Grid inverse>
             <OrderCarousel />
             <FlipText>
@@ -72,6 +77,7 @@ const About = () => (
               <p></p>
             </FlipText>
           </Grid>
+          </Fade>
         </Container>
       </Section>
     )}
