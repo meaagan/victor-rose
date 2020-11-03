@@ -20,7 +20,7 @@ const Header = () => {
 
         mobile: file(
           sourceInstanceName: { eq: "homepage" }
-          name: { eq: "window" }
+          name: { eq: "coverphotomobile" }
         ) {
           childImageSharp {
             fluid(maxWidth: 3000) {

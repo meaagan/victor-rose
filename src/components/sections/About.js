@@ -48,7 +48,7 @@ const About = () => (
     render={data => (
       <Section id="about">
         <Container>
-        <Fade left>
+        <Fade>
             <Grid inverse>
               <BoxedImage image={data.story.childImageSharp.fluid} />
               <FlipText>
@@ -59,7 +59,7 @@ const About = () => (
               </FlipText>
             </Grid>
           </Fade>
-          <Fade right>
+          <Fade>
             <Grid>
               <FlipText>
                 <h2>Artist of the Month</h2>
@@ -69,7 +69,7 @@ const About = () => (
               <BoxedImage image={data.artist1.childImageSharp.fluid} />
             </Grid>
           </Fade>
-          <Fade left>
+          <Fade>
             <Grid inverse>
               <OrderCarousel />
               <FlipText>
