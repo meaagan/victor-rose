@@ -15,7 +15,7 @@ const About = () => (
           name: { eq: "happyholidays" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 800, maxHeight: 800) {
+            fluid(maxWidth: 1000, maxHeight: 1000) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }

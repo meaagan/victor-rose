@@ -48,7 +48,7 @@ export const Art = styled.figure`
 `;
 
 export const FlipText = styled.div`
-  @media (max-width: ${props => props.theme.screen.md}) {
+  @media (max-width: ${props => props.theme.screen.md}) {s
     order: 1;
   }
 `

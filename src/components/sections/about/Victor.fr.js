@@ -30,9 +30,9 @@ const Victor = () => (
                     <VictorText>
                         <h2>VICTOR ROSE</h2>
                         <p>
-                            Victor Rose est né en 1897 à Londres, en Angleterre, et est décédé en 1989. Après avoir été soldat dans les tranchées durant la Première Guerre Mondiale, il s’est rendu au Canada pour étudier la théologie à l’université McGill. Artiste dès sa jeunesse, son talent se traduisait dans tous les aspects de sa vie.
+                        Victor Rose est né en 1897 à Londres, en Angleterre, et est décédé en 1989. Après avoir servi dans les tranchées durant la Première Guerre mondiale, il est venu au Canada pour étudier la théologie à l’Université McGill. Artiste dès l’enfance, il a manifesté son talent dans tous les aspects de sa vie. 
                             <br /><br />
-                            Il était un Pasteur, un musicien, un pacifiste, un humanitariste, un mari, un père, un grand-père et, toujours, un artiste. Victor Rose est l’un des membres fondateurs de L’Association des Artistes du Lakeshore.
+                            Il était Pasteur, musicien, pacifiste et impliqué dans l’aide humanitaire. Un époux, un père, un grand-père, il a toujours été un artiste. Victor Rose fut un membre fondateur de l’Association des artistes de Lakeshore. 
                         </p>
                         </VictorText>
             </VictorContainer>

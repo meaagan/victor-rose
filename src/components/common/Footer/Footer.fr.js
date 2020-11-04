@@ -56,7 +56,7 @@ const Footer = () => (
               <Img fluid={data.logo.childImageSharp.fluid} />
             </Copyright>
               <div>
-                <h2>Heures d'Ouverture</h2>
+                <h2>Heures d’ouverture</h2>
                 <FooterText>
                   <Bold>LUN-SAM</Bold>
                   <br /> 
@@ -68,7 +68,7 @@ const Footer = () => (
                 </FooterText>
               </div>
               <div>
-                <h2>Location</h2>
+                <h2>Emplacement</h2>
                 <FooterText>
                   15C Cartier Ave
                   <br /> 
@@ -78,7 +78,7 @@ const Footer = () => (
                 </FooterText>
               </div>
               <div>
-                <h2>Contact</h2>
+                <h2>Pour nous contacter</h2>
                 <FooterText>
                   (514) 447-2711
                   <br /> 

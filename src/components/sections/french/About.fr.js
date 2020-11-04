@@ -53,7 +53,7 @@ const About = () => (
             <FlipText>
               <h2>Notre Histoire</h2>
               <p>
-                Le Victor Rose Espresso Bar du village de Pointe-Claire est un café du commerce équitable dirigé par le duo mère-fille de la région, Marie & Terry. Un lieu communautaire pour rencontrer vos amis ou prendre votre café du matin sur le chemin du travail!
+                Le Bar Espresso Victor Rose est un café de commerce equitable direct géré par le duo mère-fille de Marie & Terry. Un lieu pour rencontrer des amis, ou pour vous procurer votre café matinal en allant travailler!
               </p>
             </FlipText>
           </Grid>
@@ -61,8 +61,8 @@ const About = () => (
           <Fade>
           <Grid>
             <FlipText>
-            <h2>Artist du Mois</h2>
-              <h3>Sur pause durant COVID-19</h3>
+            <h2>L'Artiste du Mois</h2>
+              <h3>En pause temporaire durant la COVID-19</h3>
               <p></p>
             </FlipText>
             <BoxedImage image={data.artist1.childImageSharp.fluid} />
@@ -72,8 +72,8 @@ const About = () => (
           <Grid inverse>
             <OrderCarousel />
             <FlipText>
-            <h2>Espace Travail Commun</h2>
-              <h3>Sur pause durant COVID-19</h3>
+            <h2>Espace de travail partagé</h2>
+              <h3>En pause temporaire durant la COVID-19</h3>
               <p></p>
             </FlipText>
           </Grid>
