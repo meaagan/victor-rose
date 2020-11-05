@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image';
  
 const Header = () => {
-  const { mobile, desktop } = useStaticQuery(
+  const { portrait, desktop } = useStaticQuery(
     graphql`
       query {
         desktop: file(
@@ -18,9 +18,9 @@ const Header = () => {
           }
         }
 
-        mobile: file(
+        portrait: file(
           sourceInstanceName: { eq: "homepage" }
-          name: { eq: "coverphotomobile" }
+          name: { eq: "coffee1" }
         ) {
           childImageSharp {
             fluid(maxWidth: 3000) {
@@ -33,10 +33,10 @@ const Header = () => {
     `)
 
   const sources = [
-    mobile.childImageSharp.fluid,
+    portrait.childImageSharp.fluid,
     {
       ...desktop.childImageSharp.fluid,
-      media: `(min-width: 491px)`,
+      media: `(min-width: 1024px)`,
     },
   ]
 
@@ -63,6 +63,7 @@ const Parallax = styled(BackgroundImage)`
 
 const HeaderWrapper = styled.div`
     height: 100vh;
+    padding-top:25px;
 `
 
 export default Header;

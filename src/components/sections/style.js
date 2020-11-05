@@ -41,6 +41,9 @@ export const Art = styled.figure`
   max-width: 765px;
   width: 100%;
   height: 100%;
+  -webkit-box-shadow: 10px 10px 28px -9px rgba(0,0,0,0.69);
+  -moz-box-shadow: 10px 10px 28px -9px rgba(0,0,0,0.69);
+  box-shadow: 10px 10px 28px -9px rgba(0,0,0,0.69);
 
   @media (max-width: ${props => props.theme.screen.md}) {
     order: 2;
@@ -53,7 +56,10 @@ export const FlipText = styled.div`
   }
 `
 
-export const OrderCarousel = styled(Coworking)`
+  export const OrderCarousel = styled(Coworking)`
+  -webkit-box-shadow: 10px 10px 28px -9px rgba(0,0,0,0.69);
+  -moz-box-shadow: 10px 10px 28px -9px rgba(0,0,0,0.69);
+  box-shadow: 10px 10px 28px -9px rgba(0,0,0,0.69);
   @media (max-width: ${props => props.theme.screen.md}) {
     order: 2;
   }
@@ -75,4 +81,7 @@ export const Box = styled.div`
     position: absolute;
     left: 15px;
     top: 15px;
+    -webkit-box-shadow: 10px 10px 28px -9px rgba(0,0,0,0.69);
+    -moz-box-shadow: 10px 10px 28px -9px rgba(0,0,0,0.69);
+    box-shadow: 10px 10px 28px -9px rgba(0,0,0,0.69);
 `

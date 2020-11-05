@@ -24,6 +24,9 @@ const Box = styled.div`
     position: absolute;
     left: 149px;
     top: 20px;
+    -webkit-box-shadow: 10px 10px 28px -9px rgba(0,0,0,0.69);
+    -moz-box-shadow: 10px 10px 28px -9px rgba(0,0,0,0.69);
+    box-shadow: 10px 10px 28px -9px rgba(0,0,0,0.69);
 
     @media (max-width: ${props => props.theme.screen.lg}) {
         height: 98%;

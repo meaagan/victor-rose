@@ -47,4 +47,7 @@ export const Trio = styled.figure`
     margin: 0;
     max-width: 300px;
     width: 100%;
+    -webkit-box-shadow: 10px 10px 28px -9px rgba(0,0,0,0.69);
+    -moz-box-shadow: 10px 10px 28px -9px rgba(0,0,0,0.69);
+    box-shadow: 10px 10px 28px -9px rgba(0,0,0,0.69);
 `;
