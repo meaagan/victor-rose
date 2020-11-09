@@ -32,6 +32,9 @@ const StyledLink = styled.a`
 const CLink = styled.li`
   padding: 4px;
   padding-left:0;
+  @media (max-width: ${props => props.theme.screen.md}) {
+    ${props => props.theme.font_size.small};
+  }
 `
 
 export default Links
