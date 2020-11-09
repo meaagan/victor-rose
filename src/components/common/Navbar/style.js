@@ -36,6 +36,20 @@ export const StyledLink = styled(GatsbyLink)`
   }
 `;
 
+export const ELink = styled.a`
+  margin: 0px 0.75em;
+  ${props => props.theme.font_size.small};
+  font-family: ${props => props.theme.font.secondary};
+  color: ${props => props.theme.color.black.light};
+  text-decoration: none;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+
+  &:hover {
+    color: black;
+  }
+`;
+
 export const Brand = styled.div`
   font-family: ${props => props.theme.font.primary};
   ${props => props.theme.font_size.large};
