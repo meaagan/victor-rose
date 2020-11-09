@@ -33,7 +33,8 @@ const CLink = styled.li`
   padding: 4px;
   padding-left:0;
   @media (max-width: 991px) {
-    ${props => props.theme.font_size.small};
+    font-size: 20px; 
+    line-height: 30px;
   }
 `
 
