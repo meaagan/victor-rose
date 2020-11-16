@@ -16,10 +16,10 @@ class VRMap extends React.Component {
 
   componentDidMount() {
     const map = new mapboxgl.Map({
-    container: this.mapContainer,
-    style: 'mapbox://styles/mapbox/streets-v11',
-    center: [this.state.lng, this.state.lat],
-    zoom: this.state.zoom
+      container: this.mapContainer,
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [this.state.lng, this.state.lat],
+      zoom: this.state.zoom
     });
      
     map.on('move', () => {
@@ -28,8 +28,8 @@ class VRMap extends React.Component {
         lat: map.getCenter().lat.toFixed(4),
         zoom: map.getZoom().toFixed(2)
       });
-      });
-    }
+    });
+  }
 
   render() {
     return (

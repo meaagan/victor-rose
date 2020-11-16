@@ -27,8 +27,8 @@ const Victor = () => (
                         <Box></Box>
                     </VicImg>
                     <VictorText>
-                        <h2>VICTOR ROSE</h2>
-                        <p>
+                        <h2 style={{textAlign: 'center'}}>VICTOR ROSE</h2>
+                        <p style={{textAlign: 'justify'}}>
                             Victor Rose was born in London England in 1897 died in 1989. 
                             After serving in the trenches in the First World War he came 
                             to Canada to study theology at McGill University. 

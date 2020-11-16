@@ -57,11 +57,11 @@ display: flex;
 justify-content: space-evenly;
 align-items:center;
 overflow: visible;
+padding-top: 10%;
 
 @media (max-width: ${props => props.theme.screen.md}) {
-    display: flex;
     flex-direction:column;
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
   }
 `

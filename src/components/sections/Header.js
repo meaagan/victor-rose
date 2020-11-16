@@ -51,8 +51,6 @@ const Header = () => {
   )
 };
 
-
-
 const Parallax = styled(BackgroundImage)`
   background-attachment: fixed; 
   background-position: 60% 50%; 
