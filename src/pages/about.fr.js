@@ -6,6 +6,7 @@ import { Container, Section } from '@components/global';
 
 import Victor from '@sections/about/Victor.fr'
 import Triptych from '@components/common/Triptych'
+import AboutUs from '@sections/about/AboutUs.fr'
 
 const About = () => (
   <StaticQuery
@@ -51,8 +52,9 @@ const About = () => (
           <Layout>
             <Container>
               <Section>
+              <AboutUs />
+                <Triptych  pic1={data.pic1.childImageSharp.fluid} pic2={data.pic2.childImageSharp.fluid} pic3={data.pic3.childImageSharp.fluid}/>
                 <Victor />
-                <Triptych pic1={data.pic1.childImageSharp.fluid} pic2={data.pic2.childImageSharp.fluid} pic3={data.pic3.childImageSharp.fluid}/>
               </Section>
             </Container>
           </Layout>
