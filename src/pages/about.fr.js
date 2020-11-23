@@ -52,7 +52,7 @@ const About = () => (
           <Layout>
             <Container>
               <Section>
-              <AboutUs />
+                <AboutUs />
                 <Triptych  pic1={data.pic1.childImageSharp.fluid} pic2={data.pic2.childImageSharp.fluid} pic3={data.pic3.childImageSharp.fluid}/>
                 <Victor />
               </Section>
