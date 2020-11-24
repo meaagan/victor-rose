@@ -1,7 +1,7 @@
 import React from "react"
 
 import styled from 'styled-components';
-import { Link } from 'gatsby'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 import SideDrawer from "./SideDrawer"
 import { Toolbar, Hidden } from "@material-ui/core";
 import HideOnScroll from "./HideOnScroll"
@@ -10,15 +10,27 @@ import {
   NavbarList,
   NavContainer,
   AppBarStyled,
+  ELink,
   StyledLink } from "./style"
 
-const navLinks = [
-  { title: `À Propos`, path: `/fr/about` },
-  // { title: `menu`, path: `/menu` },
-  { title: `contact`, path: `/fr/contact` },
-]
+
 
 const Navbar = () => {
+  const data = useStaticQuery(graphql`
+    {
+      file(extension: {eq: "pdf"}) {
+        id
+        publicURL
+      }
+    }
+  `)  
+
+  const navLinks = [
+    { title: `À Propos`, path: `/fr/about` },
+    { title: `Menu`, path: `${data.file.publicURL}` },
+    { title: `Contact`, path: `/fr/contact` },
+  ]
+
   return (
     <HideOnScroll>
       <AppBarStyled position="fixed">
@@ -28,9 +40,8 @@ const Navbar = () => {
             <Hidden smDown>
               <NavbarList component="nav" aria-labelledby="main navigation">
                 <StyledLink to='/fr/about' key='about' style={{backgroundImage: 'linear-gradient(0deg, rgb(202,157,124) 50%, transparent 50%)'}}>À Propos</StyledLink>
-                <StyledLink to='/fr/contact' key='contact' style={{backgroundImage: 'linear-gradient(0deg, rgb(233,203,167) 50%, transparent 50%)'}}>Contact</StyledLink>
-                {/* <StyledLink to='/menu' key='menu' style={{backgroundImage: 'linear-gradient(0deg, rgb(245,238,220) 50%, transparent 50%)'}}>Menu</StyledLink> */}
-                
+                <StyledLink to='/contact' key='contact' style={{backgroundImage: 'linear-gradient(0deg, rgb(233,203,167) 50%, transparent 50%)'}}>Contact</StyledLink>
+                <ELink href={data.file.publicURL} key='menu' style={{backgroundImage: 'linear-gradient(0deg, rgb(245,238,220) 50%, transparent 50%)'}} >Menu</ELink>
                 <StyledLink to='/' key='home'>English</StyledLink>
               </NavbarList>
             </Hidden>
