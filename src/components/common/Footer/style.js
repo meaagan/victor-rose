@@ -2,8 +2,6 @@ import styled from 'styled-components';
 import { Container } from '@components/global';
 
 export const SocialLink = styled.a`
-  width: 50px;
-  height: 50px;
   color: black;
 `
 
@@ -14,11 +12,7 @@ export const Bold = styled.span`
 export const SocialIcons = styled.div`
   display: flex;
 
-  img {
-    margin: 0 8px;
-    width: 24px;
-    height: 24px;
-  }
+
 
   @media (max-width: ${props => props.theme.screen.sm}) {
     margin-top: 40px;

@@ -36,6 +36,19 @@ const Footer = () => (
   <StaticQuery
     query={graphql`
       query {
+        levelground: file(
+          sourceInstanceName: { eq: "footer" }
+          name: { eq: "levelground" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 150) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
+        
+
+
         logo: file(
           sourceInstanceName: { eq: "footer" }
           name: { eq: "logoroundwhite" }
@@ -46,6 +59,8 @@ const Footer = () => (
             }
           }
         }
+
+
       }
     `}
     render={data => (
@@ -91,6 +106,12 @@ const Footer = () => (
                     </SocialLink>
                   ))}
                 </SocialIcons>
+                <div>
+                    {/* <figure style={{width:'75px'}}>
+                      <Img fluid={data.levelground.childImageSharp.fluid} />
+                    </figure> */}
+                    <a href="https://levelground.com/" rel="noreferrer" target="_blank">Level Ground Trading</a>
+                  </div>
               </div>
           </StyledContainer>
         </FooterWrapper>

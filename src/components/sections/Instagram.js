@@ -49,7 +49,7 @@ const Instagram = () => {
       };
 
     return (
-        <Section id="instagram">
+        <StyledSection id="instagram">
             <Container>
               <h2 style={{paddingBottom: '5%'}}>Follow us on Instagram</h2>
                 <StyledCarousel
@@ -68,9 +68,13 @@ const Instagram = () => {
                     })}
                 </StyledCarousel>
             </Container>
-        </Section>
+        </StyledSection>
     )
 }
+
+const StyledSection = styled(Section)`
+
+`
 
 const StyledCarousel = styled(Carousel)`
   transition: all 0.5s ease 0s;

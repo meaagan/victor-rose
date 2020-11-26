@@ -4,6 +4,8 @@ import Img from 'gatsby-image';
 
 import './footer.css'
 
+import styled from 'styled-components'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons'
 import { faInstagramSquare } from '@fortawesome/free-brands-svg-icons'
@@ -91,6 +93,7 @@ const Footer = () => (
                     </SocialLink>
                   ))}
                 </SocialIcons>
+                <StyledLink href="https://levelground.com/" rel="noreferrer" target="_blank">Level Ground Trading</StyledLink>
               </div>
           </StyledContainer>
         </FooterWrapper>
@@ -98,5 +101,17 @@ const Footer = () => (
     )}
   />
 );
+
+const StyledLink = styled("a")`
+  background-image: linear-gradient(0deg, rgb(233,203,167) 50%, transparent 50%);
+  color: ${props => props.theme.color.black.light};
+  text-decoration: none;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+
+  &:hover {
+    text-decoration: none;
+  }
+`
 
 export default Footer;
