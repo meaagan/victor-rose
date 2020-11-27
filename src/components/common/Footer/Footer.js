@@ -89,7 +89,7 @@ const Footer = () => (
                 <SocialIcons>
                   {SOCIAL.map(({ icon, link }) => (
                     <SocialLink key={link} href={link}>
-                      <FontAwesomeIcon icon={icon} />
+                      <FontAwesomeIcon icon={icon} className="fontIcon" />
                     </SocialLink>
                   ))}
                 </SocialIcons>

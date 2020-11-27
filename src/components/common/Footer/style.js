@@ -3,6 +3,8 @@ import { Container } from '@components/global';
 
 export const SocialLink = styled.a`
   color: black;
+  font-size: 2rem;
+  margin-right: 5px;
 `
 
 export const Bold = styled.span`
