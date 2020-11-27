@@ -38,6 +38,18 @@ const Footer = () => (
   <StaticQuery
     query={graphql`
       query {
+        levelground: file(
+          sourceInstanceName: { eq: "footer" }
+          name: { eq: "levelground" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 200) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
+
+
         logo: file(
           sourceInstanceName: { eq: "footer" }
           name: { eq: "logoroundwhite" }
@@ -93,8 +105,10 @@ const Footer = () => (
                     </SocialLink>
                   ))}
                 </SocialIcons>
-                <StyledLink href="https://levelground.com/" rel="noreferrer" target="_blank">Level Ground Trading</StyledLink>
               </div>
+              <StyledLink href="https://levelground.com/" rel="noreferrer" target="_blank">
+                  <Img fluid={data.levelground.childImageSharp.fluid} style={{width:'60px', marginTop: '20px'}} />
+              </StyledLink>
           </StyledContainer>
         </FooterWrapper>
       </React.Fragment>
@@ -103,15 +117,15 @@ const Footer = () => (
 );
 
 const StyledLink = styled("a")`
-  background-image: linear-gradient(0deg, rgb(233,203,167) 50%, transparent 50%);
-  color: ${props => props.theme.color.black.light};
-  text-decoration: none;
-  padding-left: 0.25em;
-  padding-right: 0.25em;
+  // background-image: linear-gradient(0deg, rgb(233,203,167) 50%, transparent 50%);
+  // color: ${props => props.theme.color.black.light};
+  // text-decoration: none;
+  // padding-left: 0.25em;
+  // padding-right: 0.25em;
 
-  &:hover {
-    text-decoration: none;
-  }
+  // &:hover {
+  //   text-decoration: none;
+  // }
 `
 
 export default Footer;
