@@ -29,6 +29,7 @@ const Navbar = () => {
     { title: `about`, path: `/about` },
     { title: `menu`, path: `${data.file.publicURL}` },
     { title: `contact`, path: `/contact` },
+    { title: `order online`, path: `https://order.koomi.com/victor-rose-espresso-bar-WdqQQADa84/en`}
   ]
 
   return (
@@ -39,9 +40,10 @@ const Navbar = () => {
             <Brand><HomeLink to="/">VICTOR ROSE</HomeLink></Brand>
             <Hidden smDown>
               <NavbarList component="nav" aria-labelledby="main navigation">
-                <StyledLink to='/about' key='about' style={{backgroundImage: 'linear-gradient(0deg, rgb(202,157,124) 50%, transparent 50%)'}}>About</StyledLink>
-                <StyledLink to='/contact' key='contact' style={{backgroundImage: 'linear-gradient(0deg, rgb(233,203,167) 50%, transparent 50%)'}}>Contact</StyledLink>
-                <ELink href={data.file.publicURL} key='menu' style={{backgroundImage: 'linear-gradient(0deg, rgb(245,238,220) 50%, transparent 50%)'}} >Menu</ELink>
+                <StyledLink to='/about' key='about' style={{backgroundImage: 'linear-gradient(0deg, rgb(156,119,92) 50%, transparent 50%)'}}>About</StyledLink>
+                <StyledLink to='/contact' key='contact' style={{backgroundImage: 'linear-gradient(0deg, rgb(202,157,124) 50%, transparent 50%)'}}>Contact</StyledLink>
+                <ELink href={data.file.publicURL} key='menu' style={{backgroundImage: 'linear-gradient(0deg, rgb(233,203,167) 50%, transparent 50%)'}} >Menu</ELink>
+                <ELink href='https://order.koomi.com/victor-rose-espresso-bar-WdqQQADa84/en' key='order online' style={{backgroundImage: 'linear-gradient(0deg, rgb(245,238,220) 50%, transparent 50%)'}} >Order Online</ELink>
                 <StyledLink to='/fr' key='home'>Français</StyledLink>
               </NavbarList>
             </Hidden>
