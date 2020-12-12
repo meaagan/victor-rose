@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { graphql, useStaticQuery } from 'gatsby'
-import BackgroundImage from 'gatsby-background-image';
+import Img from 'gatsby-image'
  
 const Header = () => {
   const { portrait, desktop } = useStaticQuery(
@@ -40,6 +40,8 @@ const Header = () => {
     },
   ]
 
+
+
   return(
     <HeaderWrapper>
       <Parallax
@@ -47,20 +49,28 @@ const Header = () => {
         fluid= {sources}
       >
       </Parallax>
+      {/* <StyledImg fluid={sources} /> */}
     </HeaderWrapper>
   )
 };
 
-const Parallax = styled(BackgroundImage)`
-  background-attachment: fixed; 
-  background-position: 60% 50%; 
-  background-repeat: no-repeat; 
-  background-size: cover; 
+const Parallax = styled(Img)`
+  position: absolute; 
+  top: 0px; 
+  left: 0px;
+  width: 100vw; 
   height: 100vh; 
+  object-fit: cover; 
+  object-position: center center; 
+  opacity: 1; 
+  transition: none 0s ease 0s;
+
 `;
 
+
+
 const HeaderWrapper = styled.div`
-    height: 100vh;
+    // height: 100vh;
     padding-top:25px;
 `
 
