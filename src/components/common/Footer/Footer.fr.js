@@ -106,13 +106,9 @@ const Footer = () => (
                     </SocialLink>
                   ))}
                 </SocialIcons>
-                <div>
-                    {/* <figure style={{width:'75px'}}>
-                      <Img fluid={data.levelground.childImageSharp.fluid} />
-                    </figure> */}
-                    <a href="https://levelground.com/" rel="noreferrer" target="_blank">Level Ground Trading</a>
-                  </div>
-              </div>
+                <StyledLink href="https://levelground.com/" rel="noreferrer" target="_blank">
+                  <Img fluid={data.levelground.childImageSharp.fluid} style={{width:'60px', marginTop: '20px'}} />
+              </StyledLink>
           </StyledContainer>
         </FooterWrapper>
       </React.Fragment>
