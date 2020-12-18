@@ -106,10 +106,10 @@ const Footer = () => (
                     </SocialLink>
                   ))}
                 </SocialIcons>
+              </div>
               <a href="https://levelground.com/" rel="noreferrer" target="_blank">
                   <Img fluid={data.levelground.childImageSharp.fluid} style={{width:'60px', marginTop: '20px'}} />
               </a>
-            </div>
           </StyledContainer>
         </FooterWrapper>
       </React.Fragment>

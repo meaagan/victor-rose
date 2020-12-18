@@ -3,13 +3,19 @@ import { Link as GatsbyLink } from "gatsby";
 import {
   AppBar,
   Container,
-  List
+  List,
+  Toolbar
 } from "@material-ui/core";
 
 export const NavbarList = styled(List)`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+`
+
+export const StyledToolbar = styled(Toolbar)`
+display: flex;
+justify-content: space-around;
 `
 
 export const NavContainer = styled(Container)`

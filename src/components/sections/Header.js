@@ -49,7 +49,6 @@ const Header = () => {
         fluid= {sources}
       >
       </Parallax>
-      {/* <StyledImg fluid={sources} /> */}
     </HeaderWrapper>
   )
 };

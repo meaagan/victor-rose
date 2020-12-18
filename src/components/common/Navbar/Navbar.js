@@ -3,9 +3,10 @@ import React from "react"
 import styled from 'styled-components';
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import SideDrawer from "./SideDrawer"
-import { Toolbar, Hidden } from "@material-ui/core";
+import {  Hidden } from "@material-ui/core";
 import HideOnScroll from "./HideOnScroll"
 import { 
+  StyledToolbar,
   Brand, 
   NavbarList,
   NavContainer,
@@ -29,14 +30,14 @@ const Navbar = () => {
     { title: `about`, path: `/about` },
     { title: `menu`, path: `${data.file.publicURL}` },
     { title: `contact`, path: `/contact` },
-    { title: `order online`, path: `https://order.koomi.com/victor-rose-espresso-bar-WdqQQADa84/en`}
+    { title: `order online`, path: `https://order.koomi.com/victor-rose-espresso-bar-WdqQQADa84/en`},
+    { title: `Français`, path: `/fr` }
   ]
 
   return (
     <HideOnScroll>
       <AppBarStyled position="fixed">
-        <Toolbar style={{backgroundColor: 'white'}}>
-          <NavContainer maxWidth="md" style={{display:'flex'}}>
+        <StyledToolbar style={{backgroundColor: 'white', }}>
             <Brand><HomeLink to="/">VICTOR ROSE</HomeLink></Brand>
             <Hidden smDown>
               <NavbarList component="nav" aria-labelledby="main navigation">
@@ -50,8 +51,7 @@ const Navbar = () => {
             <Hidden mdUp>
               <SideDrawer navLinks={navLinks} />
             </Hidden>
-          </NavContainer>
-        </Toolbar>
+        </StyledToolbar>
       </AppBarStyled>
     </HideOnScroll>
   )

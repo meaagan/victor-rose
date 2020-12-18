@@ -28,9 +28,14 @@ const Announcements = () => (
             fluid={data.announcements.childImageSharp.fluid}
         >
           <TextBox>
-            <h1>Annonces</h1>
+            <h1>Annonces</h1><br />
+            <h2>Joyeuses Fêtes!</h2><br />
             <p style={{color: 'white'}}>
-              Lorem ipsum dolor amet
+              Déc 24: 8h - 14h <br />
+              Déc 25 - 27: FERMÉ <br />
+              Déc 28 - 39: 8h - 15h<br/>
+              Déc 31: 8h - 14h<br/>
+              Jan 1 - 8: FERMÉ
             </p>
           </TextBox>
         </StyledContainer>

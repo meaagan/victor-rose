@@ -106,9 +106,9 @@ const Footer = () => (
                   ))}
                 </SocialIcons>
               </div>
-              <StyledLink href="https://levelground.com/" rel="noreferrer" target="_blank">
+              <a href="https://levelground.com/" rel="noreferrer" target="_blank">
                   <Img fluid={data.levelground.childImageSharp.fluid} style={{width:'60px', marginTop: '20px'}} />
-              </StyledLink>
+              </a>
           </StyledContainer>
         </FooterWrapper>
       </React.Fragment>
@@ -116,16 +116,5 @@ const Footer = () => (
   />
 );
 
-const StyledLink = styled("a")`
-  // background-image: linear-gradient(0deg, rgb(233,203,167) 50%, transparent 50%);
-  // color: ${props => props.theme.color.black.light};
-  // text-decoration: none;
-  // padding-left: 0.25em;
-  // padding-right: 0.25em;
-
-  // &:hover {
-  //   text-decoration: none;
-  // }
-`
 
 export default Footer;
