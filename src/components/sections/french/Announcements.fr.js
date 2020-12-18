@@ -33,7 +33,7 @@ const Announcements = () => (
             <p style={{color: 'white'}}>
               Déc 24: 8h - 14h <br />
               Déc 25 - 27: FERMÉ <br />
-              Déc 28 - 39: 8h - 15h<br/>
+              Déc 28 - 30: 8h - 15h<br/>
               Déc 31: 8h - 14h<br/>
               Jan 1 - 8: FERMÉ
             </p>
