@@ -9,7 +9,6 @@ import {
   StyledToolbar,
   Brand, 
   NavbarList,
-  NavContainer,
   AppBarStyled,
   StyledLink,
   ELink } from "./style"
