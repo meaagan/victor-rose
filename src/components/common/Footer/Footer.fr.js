@@ -106,9 +106,9 @@ const Footer = () => (
                     </SocialLink>
                   ))}
                 </SocialIcons>
-              <StyledLink href="https://levelground.com/" rel="noreferrer" target="_blank">
+              <a href="https://levelground.com/" rel="noreferrer" target="_blank">
                   <Img fluid={data.levelground.childImageSharp.fluid} style={{width:'60px', marginTop: '20px'}} />
-              </StyledLink>
+              </a>
             </div>
           </StyledContainer>
         </FooterWrapper>
