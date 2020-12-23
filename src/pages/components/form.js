@@ -116,8 +116,8 @@ class Form extends React.Component {
   }
 }
 
-const Field = styled.p`
-  margin: 10px;
+const Field = styled.div`
+  margin-bottom: 10px;
 `
 
 export default Form
