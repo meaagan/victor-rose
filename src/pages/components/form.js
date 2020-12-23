@@ -26,9 +26,8 @@ class Form extends React.Component {
        headers: { "Content-Type": "application/x-www-form-urlencoded"},
        body: encode({ "form-name": "contact", ...this.state })
       })
-        .catch(error => alert("Error! Please fill out all required fields"))
-        .then(() => this.setState({text:'Sent!'}))
-        
+      .catch(error => alert("Error! Please fill out all required fields"))
+      .then(() => this.setState({text:'Sent!'}))
 
       e.preventDefault();
    }
@@ -56,7 +55,7 @@ class Form extends React.Component {
           <Field>
             <TextField
               fullWidth
-              label="First Name"
+              label="Prénom/First Name"
               type="text"
               name="firstName"
               value={this.state.firstName}
@@ -69,7 +68,7 @@ class Form extends React.Component {
           <Field>
             <TextField
               fullWidth
-              label="Last name"
+              label="Nom/Last name"
               type="text" 
               name="lastName"
               value={this.state.lastName}
@@ -108,7 +107,7 @@ class Form extends React.Component {
             />
           </Field>
           <Field>
-            <Button variant="contained" type="submit" onClick= {this.handleClick}>
+            <Button variant="contained" type="submit" onClick={this.handleClick}>
               {this.state.text}
             </Button>
           </Field>

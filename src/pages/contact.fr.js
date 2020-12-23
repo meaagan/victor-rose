@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Layout from '@common/Layout.fr';
-import Form from './components/form.fr';
+import Form from './components/form';
 import { StaticQuery, graphql } from 'gatsby';
 import { Section, Container } from '@components/global';
 import Links  from './components/links'
