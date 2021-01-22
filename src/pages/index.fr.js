@@ -9,7 +9,7 @@ import Instagram from '@sections/french/Instagram.fr'
 const IndexPage = () => (
   <Layout>
     <Header />
-    <Announcements />
+    {/* <Announcements /> */}
     <About />
     <Instagram />
   </Layout>
