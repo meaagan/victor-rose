@@ -42,6 +42,17 @@ const About = () => (
           }
         }
 
+        donation: file(
+          sourceInstanceName: { eq: "homepage" }
+          name: { eq: "box" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 800, maxHeight: 800) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
+
       }
     `}
     render={data => (
@@ -77,6 +88,15 @@ const About = () => (
               <p></p>
             </FlipText>
           </Grid>
+          </Fade>
+          <Fade>
+            <Grid>
+              <FlipText>
+                <h2>MOI Collection Box</h2>
+                <p>La Mission de l’Ouest de l’Île est un organisme sans but lucratif qui apporte une aide alimentaire en offrant des aliments bien équilibrés de haute qualité et de l’aide connexe aux résidents en difficulté de l’Ouest de l’Île de Montréal. Nous allons collecter de façon permanente pour cette organisation.</p>
+              </FlipText>
+              <BoxedImage image={data.donation.childImageSharp.fluid} />
+            </Grid>
           </Fade>
         </Container>
       </Section>

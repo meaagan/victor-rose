@@ -32,6 +32,17 @@ const About = () => (
           }
         }
 
+        donation: file(
+          sourceInstanceName: { eq: "homepage" }
+          name: { eq: "box" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 800, maxHeight: 800) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
+
         artist2: file(
           sourceInstanceName: { eq: "homepage" }
           name: { eq: "art8" }
@@ -77,6 +88,15 @@ const About = () => (
                 <h3>On Hold during COVID-19</h3>
                 <p></p>
               </FlipText>
+            </Grid>
+          </Fade>
+          <Fade>
+            <Grid>
+              <FlipText>
+                <h2>WIM Collection Box</h2>
+                <p>West Island Mission is a non-profit organization that provides well-balanced, high quality food assistance and other related aid to the less fortunate living in the West Island of Montreal. We will be collecting on a permanent basis for this organization.</p>
+              </FlipText>
+              <BoxedImage image={data.donation.childImageSharp.fluid} />
             </Grid>
           </Fade>
         </Container>
