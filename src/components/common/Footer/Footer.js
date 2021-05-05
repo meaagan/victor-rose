@@ -74,7 +74,7 @@ const Footer = () => (
                 <FooterText>
                   <Bold>MON-SAT</Bold>
                   <br /> 
-                  8AM - 3PM
+                  8AM - 4PM
                   <br />
                   <Bold>SUN</Bold>
                   <br />
