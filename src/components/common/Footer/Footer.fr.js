@@ -75,7 +75,7 @@ const Footer = () => (
                 <FooterText>
                   <Bold>LUN-SAM</Bold>
                   <br /> 
-                  8H - 15H
+                  8H - 16H
                   <br />
                   <Bold>DIM</Bold>
                   <br />
