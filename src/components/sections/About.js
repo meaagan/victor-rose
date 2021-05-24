@@ -34,7 +34,7 @@ const About = () => (
 
         donation: file(
           sourceInstanceName: { eq: "homepage" }
-          name: { eq: "box" }
+          name: { eq: "donation" }
         ) {
           childImageSharp {
             fluid(maxWidth: 800, maxHeight: 800) {
