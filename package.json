@@ -31,7 +31,6 @@
     "gatsby-plugin-styled-components": "^3.10.0",
     "gatsby-source-filesystem": "^2.11.1",
     "gatsby-source-fontawesome": "^0.0.1",
-    "gatsby-source-instagram": "^0.8.0-beta.0",
     "gatsby-transformer-sharp": "^2.12.1",
     "mapbox-gl": "^1.13.1",
     "prop-types": "^15.6.2",

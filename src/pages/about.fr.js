@@ -1,8 +1,8 @@
 import React from 'react';
-
 import { StaticQuery, graphql } from 'gatsby';
 import Layout from '@common/Layout.fr';
 import { Container, Section } from '@components/global';
+import styled from 'styled-components';
 
 import Victor from '@sections/about/Victor.fr'
 import Triptych from '@components/common/Triptych'
@@ -53,13 +53,22 @@ const About = () => (
             <Container>
               <Section>
                 <AboutUs />
-                <Triptych  pic1={data.pic1.childImageSharp.fluid} pic2={data.pic2.childImageSharp.fluid} pic3={data.pic3.childImageSharp.fluid}/>
+                <Video>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/1WQHm2ndvZQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </Video>
                 <Victor />
+                <Triptych  pic1={data.pic1.childImageSharp.fluid} pic2={data.pic2.childImageSharp.fluid} pic3={data.pic3.childImageSharp.fluid}/>
               </Section>
             </Container>
           </Layout>
         )}
     />
 );
+
+
+const Video = styled(Section)`
+  display: flex;
+  justify-content: center;
+`
 
 export default About;

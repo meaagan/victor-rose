@@ -11,12 +11,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-material-ui`,
-    {
-      resolve: `gatsby-source-instagram`,
-      options: {
-        username: `1921572799`,
-      },
-    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-styled-components`,

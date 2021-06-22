@@ -57,7 +57,6 @@ display: flex;
 justify-content: space-evenly;
 align-items:center;
 overflow: visible;
-padding-top: 10%;
 
 @media (max-width: ${props => props.theme.screen.md}) {
     flex-direction:column;
