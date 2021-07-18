@@ -29,13 +29,14 @@ const Announcements = () => (
         >
           <TextBox>
             <h1>Announcements</h1><br/>
-            <h2>Happy Holidays!</h2><br/>
+            <h2>We're hiring a barista!</h2><br/>
             <p style={{color: 'white'}}>
-              Dec 24: 8am - 2pm <br />
-              Dec 25 - 27: CLOSED <br />
-              Dec 28 - 30: 8am - 3pm<br/>
-              Dec 31: 8am - 2pm<br/>
-              Jan 1 - 8: CLOSED
+              1 year specialty coffee experience (only resumes with specialty coffee experience will be considered), <br />
+              Knows how to dial in coffee<br />
+              Loves dogs and people alike<br/>
+              Available on weekends<br/>
+              Has a good eye andd an ability to post cute IG stories is a plus!<br/>
+              E-mail your resume to victorrose2015@gmail.com or pass by to drop off your CV. Thanks!
             </p>
           </TextBox>
         </StyledContainer>

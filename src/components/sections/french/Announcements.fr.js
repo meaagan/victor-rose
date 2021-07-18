@@ -28,14 +28,14 @@ const Announcements = () => (
             fluid={data.announcements.childImageSharp.fluid}
         >
           <TextBox>
-            <h1>Annonces</h1><br />
-            <h2>Joyeuses Fêtes!</h2><br />
-            <p style={{color: 'white'}}>
-              Déc 24: 8h - 14h <br />
-              Déc 25 - 27: FERMÉ <br />
-              Déc 28 - 30: 8h - 15h<br/>
-              Déc 31: 8h - 14h<br/>
-              Jan 1 - 8: FERMÉ
+          <h2>Nous embauchons un barista!</h2><br/>
+            <p style={{color : 'white'}}>
+              1 an d'expérience dans le domaine du café de spécialité (seuls les CV avec une expérience dans le domaine du café de spécialité seront pris en compte), <br />.
+              Sait comment composer un café<br />.
+              Aime les chiens et les gens<br />
+              Disponible les week-ends<br/>
+              A un bon œil et une capacité à poster des histoires IG mignonnes est un plus !<br/>.
+              Envoyez votre CV par courriel à victorrose2015@gmail.com ou passez nous voir pour le déposer. Merci!
             </p>
           </TextBox>
         </StyledContainer>

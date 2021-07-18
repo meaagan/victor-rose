@@ -14,8 +14,7 @@ class Form extends React.Component {
     this.state= {text: 'Submit'}
   }
   state = {
-    firstName: "",
-    lastName: "",
+    name: "",
     email: "",
     message: "",
    };
@@ -55,23 +54,10 @@ class Form extends React.Component {
           <Field>
             <TextField
               fullWidth
-              label="Prénom/First Name"
+              label="Nom Complet/Full Name"
               type="text"
-              name="firstName"
-              value={this.state.firstName}
-              onChange={this.handleInputChange}
-              variant="outlined"
-              size="small"
-              required
-            />
-          </Field>
-          <Field>
-            <TextField
-              fullWidth
-              label="Nom/Last name"
-              type="text" 
-              name="lastName"
-              value={this.state.lastName}
+              name="name"
+              value={this.state.name}
               onChange={this.handleInputChange}
               variant="outlined"
               size="small"
