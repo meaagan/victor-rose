@@ -32,9 +32,9 @@ const Announcements = () => (
             <h2>We're hiring a barista!</h2><br/>
             <p style={{color: 'white'}}>
               1 year specialty coffee experience (only resumes with specialty coffee experience will be considered), <br />
-              Knows how to dial in coffee<br />
-              Loves dogs and people alike<br/>
-              Available on weekends<br/>
+              Knows how to dial in coffee,<br />
+              Loves dogs and people alike,<br/>
+              Available on weekends,<br/>
               Has a good eye andd an ability to post cute IG stories is a plus!<br/>
               E-mail your resume to victorrose2015@gmail.com or pass by to drop off your CV. Thanks!
             </p>
