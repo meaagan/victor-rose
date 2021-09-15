@@ -73,29 +73,19 @@ const About = () => (
           <Grid>
             <FlipText>
             <h2>L'Artiste du Mois</h2>
-              <h3>En pause temporaire durant la COVID-19</h3>
+              <h3>Bientôt disponible</h3>
               <p></p>
             </FlipText>
             <BoxedImage image={data.artist1.childImageSharp.fluid} />
           </Grid>
           </Fade>
           <Fade>
-          <Grid inverse>
-            <OrderCarousel />
-            <FlipText>
-            <h2>Espace de travail partagé</h2>
-              <h3>En pause temporaire durant la COVID-19</h3>
-              <p></p>
-            </FlipText>
-          </Grid>
-          </Fade>
-          <Fade>
-            <Grid>
+            <Grid inverse>
+              <BoxedImage image={data.donation.childImageSharp.fluid} />
               <FlipText>
                 <h2>MOI Collection Box</h2>
                 <p>La Mission de l’Ouest de l’Île est un organisme sans but lucratif qui apporte une aide alimentaire en offrant des aliments bien équilibrés de haute qualité et de l’aide connexe aux résidents en difficulté de l’Ouest de l’Île de Montréal. Nous allons collecter de façon permanente pour cette organisation.</p>
               </FlipText>
-              <BoxedImage image={data.donation.childImageSharp.fluid} />
             </Grid>
           </Fade>
         </Container>

@@ -74,7 +74,7 @@ const About = () => (
             <Grid>
               <FlipText>
                 <h2>Artist of the Month</h2>
-                <h3>On Hold during COVID-19</h3>
+                <h3>Coming soon</h3>
                 <p></p>
               </FlipText>
               <BoxedImage image={data.artist1.childImageSharp.fluid} />
@@ -82,21 +82,11 @@ const About = () => (
           </Fade>
           <Fade>
             <Grid inverse>
-              <OrderCarousel />
-              <FlipText>
-                <h2>Coworking Space</h2>
-                <h3>On Hold during COVID-19</h3>
-                <p></p>
-              </FlipText>
-            </Grid>
-          </Fade>
-          <Fade>
-            <Grid>
+            <BoxedImage image={data.donation.childImageSharp.fluid} />
               <FlipText>
                 <h2>WIM Collection Box</h2>
                 <p>West Island Mission is a non-profit organization that provides well-balanced, high quality food assistance and other related aid to the less fortunate living in the West Island of Montreal. We will be collecting on a permanent basis for this organization.</p>
               </FlipText>
-              <BoxedImage image={data.donation.childImageSharp.fluid} />
             </Grid>
           </Fade>
         </Container>

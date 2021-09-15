@@ -72,7 +72,11 @@ const Footer = () => (
               <div>
                 <h2>Hours</h2>
                 <FooterText>
-                  <Bold>MON-SAT</Bold>
+                  <Bold>MON-FRI</Bold>
+                  <br /> 
+                  7:30AM - 4PM
+                  <br />
+                  <Bold>SAT</Bold>
                   <br /> 
                   8AM - 4PM
                   <br />
