@@ -2,6 +2,7 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 
 import Fade from 'react-reveal/Fade';
+import { Link } from 'gatsby'
 import BoxedImage from '@sections/components/boxedimage'
 import { Grid, OrderCarousel, FlipText } from './style'
 import { Section, Container } from '@components/global';
@@ -74,8 +75,10 @@ const About = () => (
             <Grid>
               <FlipText>
                 <h2>Artist of the Month</h2>
-                <h3>Coming soon</h3>
-                <p></p>
+                <h3>Joe Weissmann</h3>
+                <p> “Painting allows me the freedom to explore a path without restrictions or instructions from a client. While both are creatively challenging, they go in different directions. My illustrations have to relate to a text and there are often color limitations, while my paintings are free of such restraints.”<br />
+                <Link to='/artist' key='artist'>Read more</Link>
+                </p>
               </FlipText>
               <BoxedImage image={data.artist1.childImageSharp.fluid} />
             </Grid>
