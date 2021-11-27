@@ -1,17 +1,5 @@
 import styled from 'styled-components';
 
-export const Art = styled.figure`
-max-width: 500px;
-height: 100%;
-
-
-@media (max-width: ${props => props.theme.screen.sm}) {
-    display: inline-block;
-    margin: 0 auto;
-    width: 100%;
-}
-`;
-
 export const Bio = styled.div`
 width: 100%;
 flex-grow: 2;
@@ -19,10 +7,7 @@ flex-grow: 2;
     margin:0 auto;
     width:100%;
     margin-bottom: 40px;
-}
-
-@media (max-width: ${props => props.theme.screen.lg}) {
-    margin-left: 5%;
+    padding: 1rem;
 }
 `
 export const ArtistImg = styled.div`
@@ -50,17 +35,4 @@ box-shadow: 10px 10px 28px -9px rgba(0,0,0,0.69);
     left: 15px;
     top: 17px;
 }
-`
-
-export const ArtistContainer = styled.div`
-display: flex;
-justify-content: space-evenly;
-align-items:center;
-overflow: visible;
-
-@media (max-width: ${props => props.theme.screen.md}) {
-    flex-direction:column;
-    width: 80%;
-    margin: 0 auto;
-  }
 `

@@ -3,6 +3,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import Fade from 'react-reveal/Fade';
 import BoxedImage from '@sections/components/boxedimage'
 import { Grid, OrderCarousel, FlipText } from '../style'
+import { Link } from 'gatsby'
 import { Section, Container } from '@components/global';
 
 const About = () => (
@@ -73,8 +74,9 @@ const About = () => (
           <Grid>
             <FlipText>
             <h2>L'Artiste du Mois</h2>
-              <h3>Bientôt disponible</h3>
-              <p></p>
+              <h3>Joe Weissmann</h3>
+              <p>« La peinture me permet la liberté d’explorer un chemin sans restriction ou instruction de la part d’un client. Alors que les deux sont des défis créatifs, ils vont dans des directions différentes. Mes illustrations doivent être reliées à un texte et sont souvent limitées en couleur, alors que mes peintures n’ont pas ces restrictions-là. »
+<br/>                <Link to='/fr/artist' key='artist'>Read more</Link></p>
             </FlipText>
             <BoxedImage image={data.artist1.childImageSharp.fluid} />
           </Grid>
