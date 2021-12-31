@@ -28,14 +28,9 @@ const Announcements = () => (
             fluid={data.announcements.childImageSharp.fluid}
         >
           <TextBox>
-          <h2>Nous embauchons un barista!</h2><br/>
+            <h1>Annonces</h1><br/>
             <p style={{color : 'white'}}>
-              1 an d'expérience dans le domaine du café de spécialité (seuls les CV avec une expérience dans le domaine du café de spécialité seront pris en compte), <br />.
-              Sait comment composer un café<br />.
-              Aime les chiens et les gens<br />
-              Disponible les week-ends<br/>
-              A un bon œil et une capacité à poster des histoires IG mignonnes est un plus !<br/>.
-              Envoyez votre CV par courriel à victorrose2015@gmail.com ou passez nous voir pour le déposer. Merci!
+            Nous serons fermés du 1e au 10 janvier. Joyeux fêtes!
             </p>
           </TextBox>
         </StyledContainer>

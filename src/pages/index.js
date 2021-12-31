@@ -7,7 +7,7 @@ import Announcements from '@sections/Announcements';
 const IndexPage = () => (
   <Layout>
     <Header />
-    {/* <Announcements /> */}
+    <Announcements />
     <About />
   </Layout>
 );
