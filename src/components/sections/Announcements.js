@@ -30,7 +30,7 @@ const Announcements = () => (
           <TextBox>
             <h1>Announcements</h1><br/>
             <p style={{color: 'white'}}>
-              We will be closed from January 1 - 10. Happy holidays!
+              We will be closed from January 1 to 9. Happy holidays!
             </p>
           </TextBox>
         </StyledContainer>
