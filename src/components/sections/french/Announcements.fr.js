@@ -29,8 +29,15 @@ const Announcements = () => (
         >
           <TextBox>
             <h1>Annonces</h1><br/>
+            <h2>Nous embauchons!</h2><br/>
             <p style={{color : 'white'}}>
-            Nous serons fermés du 1e au 9 janvier. Joyeux fêtes!
+            Expérience du café de la 3e vague<br/>
+            Connaissance de la façon de composer dans le café<br/>
+            Aime les gens et les chiens <br/>
+            Enthousiasme pour le café et la communauté<br/>
+            Apprécie une tasse de café de qualité<br/>
+            <br/>
+            Postulez par e-mail ou en personne!
             </p>
           </TextBox>
         </StyledContainer>

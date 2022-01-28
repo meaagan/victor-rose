@@ -28,9 +28,15 @@ const Announcements = () => (
             fluid={data.announcements.childImageSharp.fluid}
         >
           <TextBox>
-            <h1>Announcements</h1><br/>
+            <h1>Announcements</h1><br />
+            <h2>We are hiring!</h2><br/>
             <p style={{color: 'white'}}>
-              We will be closed from until January 9th. Happy holidays!
+              3rd wave coffee experience<br />
+              Knowledge of how to Dial in coffee<br />
+              Has a Love of people and dogs<br />
+              Enthusiastic about coffee and community<br />
+              Enjoys a quality cup of coffee<br /><br />
+              Apply by e-mail or in person!
             </p>
           </TextBox>
         </StyledContainer>
