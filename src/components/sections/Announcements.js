@@ -29,14 +29,9 @@ const Announcements = () => (
         >
           <TextBox>
             <h1>Announcements</h1><br />
-            <h2>We are hiring!</h2><br/>
+            {/* <h2>W</h2><br/> */}
             <p style={{color: 'white'}}>
-              3rd wave coffee experience<br />
-              Knowledge of how to Dial in coffee<br />
-              Has a Love of people and dogs<br />
-              Enthusiastic about coffee and community<br />
-              Enjoys a quality cup of coffee<br /><br />
-              Apply by e-mail or in person!
+              We will be closed for vacation August 13 - 21 inclusively.
             </p>
           </TextBox>
         </StyledContainer>

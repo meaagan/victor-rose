@@ -29,15 +29,9 @@ const Announcements = () => (
         >
           <TextBox>
             <h1>Annonces</h1><br/>
-            <h2>Nous embauchons!</h2><br/>
+            {/* <h2>Nous embauchons!</h2><br/> */}
             <p style={{color : 'white'}}>
-            Expérience du café de la 3e vague<br/>
-            Connaissance de la façon de composer dans le café<br/>
-            Aime les gens et les chiens <br/>
-            Enthousiasme pour le café et la communauté<br/>
-            Apprécie une tasse de café de qualité<br/>
-            <br/>
-            Postulez par e-mail ou en personne!
+            Nous serons fermés pour les vacances du 13 au 21 août inclus.
             </p>
           </TextBox>
         </StyledContainer>

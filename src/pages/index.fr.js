@@ -8,7 +8,7 @@ import Announcements from '@sections/french/Announcements.fr';
 const IndexPage = () => (
   <Layout>
     <Header />
-    {/* <Announcements /> */}
+    <Announcements />
     <About />
   </Layout>
 );
