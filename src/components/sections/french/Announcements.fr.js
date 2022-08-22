@@ -31,7 +31,7 @@ const Announcements = () => (
             <h1>Annonces</h1><br/>
             {/* <h2>Nous embauchons!</h2><br/> */}
             <p style={{color : 'white'}}>
-            Nous serons fermés pour les vacances du 13 au 21 août inclus.
+              
             </p>
           </TextBox>
         </StyledContainer>
