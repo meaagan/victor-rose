@@ -29,9 +29,13 @@ const Announcements = () => (
         >
           <TextBox>
             <h1>Annonces</h1><br/>
-            {/* <h2>Nous embauchons!</h2><br/> */}
-            <p style={{color : 'white'}}>
-              
+            <h2>Horaire des fêtes</h2><br/>
+            <p style={{color: 'white'}}>
+              24 décembre: 8h-13h<br/>
+              25, 26 décembre: FERMÉ<br/>
+              27-30 décembre: 8h-16h<br/>
+              31 décembre: 8h-13h<br/>
+              1-8 janvier: FERMÉ
             </p>
           </TextBox>
         </StyledContainer>

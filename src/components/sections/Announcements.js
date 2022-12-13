@@ -29,9 +29,13 @@ const Announcements = () => (
         >
           <TextBox>
             <h1>Announcements</h1><br />
-            {/* <h2>W</h2><br/> */}
+            <h2>Holiday Hours</h2><br/>
             <p style={{color: 'white'}}>
-
+              December 24: 8am-1pm<br/>
+              December 25,26: CLOSED<br/>
+              December 27-30: 8am-4pm<br/>
+              December 31: 8am-1pm<br/>
+              January 1-8: CLOSED
             </p>
           </TextBox>
         </StyledContainer>
@@ -42,7 +46,6 @@ const Announcements = () => (
 
 const StyledContainer = styled(BackgroundImage)`
   height: 50vh;
-
 
   @media (max-width: ${props => props.theme.screen.md}) {
     justify-content: center;
