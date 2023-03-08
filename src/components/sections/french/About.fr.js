@@ -69,7 +69,7 @@ const About = () => (
             </FlipText>
           </Grid>
           </Fade>
-          <Fade>
+          {/* <Fade>
           <Grid>
             <FlipText>
             <h2>L'Artiste du Mois</h2>
@@ -78,14 +78,15 @@ const About = () => (
             </FlipText>
             <BoxedImage image={data.artist1.childImageSharp.fluid} />
           </Grid>
-          </Fade>
+          </Fade> */}
           <Fade>
-            <Grid inverse>
-              <BoxedImage image={data.donation.childImageSharp.fluid} />
+            <Grid>
               <FlipText>
                 <h2>MOI Collection Box</h2>
                 <p>La Mission de l’Ouest de l’Île est un organisme sans but lucratif qui apporte une aide alimentaire en offrant des aliments bien équilibrés de haute qualité et de l’aide connexe aux résidents en difficulté de l’Ouest de l’Île de Montréal. Nous allons collecter de façon permanente pour cette organisation.</p>
               </FlipText>
+              <BoxedImage image={data.donation.childImageSharp.fluid} />
+
             </Grid>
           </Fade>
         </Container>

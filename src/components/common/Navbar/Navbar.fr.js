@@ -43,7 +43,7 @@ const Navbar = () => {
                 <StyledLink to='/fr/about' key='about' style={{backgroundImage: 'linear-gradient(0deg, rgb(156,119,92) 50%, transparent 50%)'}}>À Propos</StyledLink>
                 <StyledLink to='/fr/contact' key='contact' style={{backgroundImage: 'linear-gradient(0deg, rgb(202,157,124) 50%, transparent 50%)'}}>Contact</StyledLink>
                 <ELink href={data.file.publicURL} key='menu' style={{backgroundImage: 'linear-gradient(0deg, rgb(233,203,167) 50%, transparent 50%)'}} >Menu</ELink>
-                <ELink href='https://order.koomi.com/victor-rose-espresso-bar-WdqQQADa84/fr' key='order online' style={{backgroundImage: 'linear-gradient(0deg, rgb(245,238,220) 50%, transparent 50%)'}} >Commander En Ligne</ELink>
+                {/* <ELink href='https://order.koomi.com/victor-rose-espresso-bar-WdqQQADa84/fr' key='order online' style={{backgroundImage: 'linear-gradient(0deg, rgb(245,238,220) 50%, transparent 50%)'}} >Commander En Ligne</ELink> */}
                 <StyledLink to='/' key='home'>English</StyledLink>
               </NavbarList>
             </Hidden>
